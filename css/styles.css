@@ -1,0 +1,48 @@
+@import url (bootstrap-grid.min.css);
+@import url (normalize.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*resets de base*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto",Arial,sans-serif;
+	background-color: #f8e5e5;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/*dar estilo al boton de inicio*/
+
+.login-button {
+	display: flex;
+	justify-content: center;
+	max-width: 200px;
+	max-height: 50px;
+	border-radius: 5px;
+	margin: auto;
+	background-color: fa255e;
+}
+
+.logo {
+	width: 130px;
+}
+
+[class*=col] {
+	border: dashed 1px red;
+}
