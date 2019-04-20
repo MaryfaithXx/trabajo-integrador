@@ -8,34 +8,64 @@
     <div class="Titulo">
       <h1>Registro</h1>
     </div>
+    <div class="foto-perfil">
+      <img src="images/foto-perfil.jpg" alt="foto-perfil" width="150px">
+    </div>
+
     <div class="Formulario">
       <form class="" action="bienvenido.html" method="post">
         <p>
           <label for="nombre">
           Nombre:
           </label>
+          <br>
           <input id= "nombre" type="text" name="nombre" value="" placeholder="Ingrese su nombre aqui...">
         </p>
         <p>
           <label for="apellido">
           Apellido:
           </label>
+          <br>
           <input id="apellido" type="text" name="apellido" value="" placeholder="Ingrese su apellido aqui...">
         </p>
         <p>
           <label for="email">
           Email:
           </label>
+          <br>
           <input id="email" type="email" name="email" value="" placeholder="nombre@example.com">
+        </p>
+        <p>
+          <label for="usuario">
+          Usuario:
+          </label>
+          <br>
+          <input id="usuario" type="text" name="Usuario" value="" placeholder="Ingrese un usuario...">
         </p>
         <p>
           <label for="pass">
           Contraseña:
           </label>
+          <br>
           <input id="pass" type="password" name="pass" value="">
         </p>
         <p>
-          <input type="submit" name="" value="enviar">
+          <label for="repetir-pass">
+          Repetir Contraseña:
+          </label>
+          <br>
+          <input id="repetir-pass" type="password" name="repetir-pass" value="">
+        </p>
+        <p>
+          <label for="notificaciones"></label>
+          <input type="checkbox" name="notificaciones" value="s" checked > Quiero recibir notificaciones
+        </p>
+        <p>
+          <label for="terminos"></label>
+          <input type="checkbox" name="terminos" value="s" checked >Acepto términos y condiciones
+        </p>
+        <p>
+          <input type="submit" name="" value="Registrarme">
         </p>
 
       </form>
