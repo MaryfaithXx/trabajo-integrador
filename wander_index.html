@@ -1,31 +1,157 @@
-<! doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" initial-scale="1">
-<title>Wander Home</title>
-<link rel="stylesheet" 	href="css/styles.css">
-</head>
-<body>
-	<div class="container">
-		<header class "main-header">
-		<div class="row">
-			<div class="col-4 col-lg-4">
-			<img class="logo" src="images/wander-logo.png" alt="wander-logo"/>
+<!	DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wander - Conectando viajeros en el mundo</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	</head>
+	<body>
+		<!-- main-header -->
+		<header class="main-header">
+			<div class="row">
+				<div class="col-8">
+					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+					<img class="logo" src="images/wander-logo.png" alt="wander logotype"/>
+				</div>
+				<div class="col-2">
+					<a href="#" class="register-link">Registrarme</a>
+				</div>
+				<div class="col-2">
+					<a href="#" class="login-button">Inicio</a>
+				</div>
 			</div>
-			<div class="col-4 col-lg-4">
-			<p>djngñkjfndvñjka
-			fadkgjañkfjngafñkj
-			adkgnañjkgnv</p>
-			</div>
-			<div class="col-2 col-lg-2">
-			<a href="#">Registrarme</a>
-			</div>
-			<div class="col-2 col-lg-2">
-			<a href="#" class="login-button">Inicio</a>
-			</div>
-		</div>
 		</header>
-	</div>
-</body>
+		<!-- /main-header -->
+		
+		<!-- carousel -->
+		<div class="container">
+			<section class="carousel">
+				<br>
+				<br>
+				<br>
+				<h1>not all who wander are lost...</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<br>
+				<br>
+				<br
+			</section>
+		</div>
+		<!-- /carousel -->
+		
+		<!-- search bar -->
+		<section class="search-bar">
+			<h3>Busqueda por destino</h3>
+			<form class="search-form" action="#">
+			  <label for="destination">Destino:</label>
+			  <input type="text" id="destination" placeholder="City/Country" name="destination">
+			  <label for="date">Desde:</label>
+			  <input type="date" id="from-date" placeholder="dd/mm/yyyy" name="from-date">
+			  <label for="date">Hasta:</label>
+			  <input type="date" id="to-date" placeholder="dd/mm/yyyy" name="to-date">
+			  <button class="search-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
+			<br>
+			<br>
+			</form>
+		</section>
+		<!-- /search bar -->
+		
+		<!-- featured events -->
+		<div class="container">	
+			<section class="featured-events">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<img class="tile-image" src="images/tomorrowland.jpg" alt="tomorrowland">
+						<span class="tile-label">Tomorrowland</span>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="col-12">
+							<img class="tile-image" src="images/holi-festival.jpg" alt="holi festival">
+							<span class="tile-label">Holi Festival</span>
+						</div>
+						<div class="col-12">
+							<img class="tile-image" src="images/aurora-borealis.jpg" alt="aurora borealis">
+							<span class="tile-label">Aurora Boreal</span>
+						</div>
+						</div>
+					<div class="col-6 col-md-3">
+						<div class="col-12">
+							<img class="tile-image" src="images/holi-festival.jpg" alt="holi festival">
+							<span class="tile-label">Holi Festival</span>
+						</div>
+						<div class="col-12">
+							<img class="tile-image" src="images/aurora-borealis.jpg" alt="aurora borealis">
+							<span class="tile-label">Aurora Boreal</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6 col-md-3">
+						<img class="tile-image" src="images/times-square-ball-drop.jpg" alt="times square ball drop">
+						<span class="tile-label">Año nuevo en Nueva York</span>
+					</div>
+					<div class="col-6 col-md-3">
+						<img class="tile-image" src="images/rock-in-rio.jpg" alt="rock in rio">
+						<span class="tile-label">Rock in Rio</span>
+					</div>
+					<div class="col-6 col-md-3">
+						<img class="tile-image" src="images/carnaval-bahia.jpg" alt="carnaval bahia">
+						<span class="tile-label">Carnaval en Bahia</span>
+					</div>
+					<div class="col-6 col-md-3">
+						<img class="tile-image" src="images/cannes-film-festival.jpg" alt="cannes film festival">
+						<span class="tile-label">Festival de cine de Cannes</span>
+					</div>
+				</div>
+			</section>
+		</div>	
+		<!-- /featured events -->
+		
+		<!-- main footer -->
+		<footer class="main-footer">
+			<img src="images/skyline-banner.png" alt="skyline banner">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Quiénes somos</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Trabaje con nosotros</a></li>
+						<br>
+						<br>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Mi perfil</a></li>
+						<li><a href="#">Preguntas frecuentes</a></li>
+						<br>
+						<br>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Eventos</a></li>
+						<li><a href="#">Destinos</a></li>
+						<br>
+						<br>
+						<br>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 copyright">
+					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+					<p>© derechos reservados</p>
+				</div>
+				<div class="col-4 social-links">
+					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+					<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+				</div>
+			</div>
+		</footer>
+		<!-- /main footer -->
+	</body>
 </html>

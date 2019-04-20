@@ -1,6 +1,8 @@
-@import url (bootstrap-grid.min.css);
-@import url (normalize.css);
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import "normalize.css";
+@import "bootstrap-grid.min.css";
+
 
 /*resets de base*/
 * {
@@ -23,26 +25,118 @@ img {
 }
 
 a {
+	display: inline-block;
 	text-decoration: none;
-	color: #000000;
+	color: #f1f1f1;
 }
 
-/*dar estilo al boton de inicio*/
+a:hover {
+	color: #fa255e;
+}
+
+/*dar estilo al header*/
+.main-header, .main-footer{
+	background-color: #303030;
+	color: #f1f1f1;
+}
+
+.iso {
+	float: left;
+	width: 50px;
+}
+
+.logo {
+	width: 100px;
+	margin: 10px 10px;
+}
+/*dar estilo a la sección de inicio*/
 
 .login-button {
 	display: flex;
 	justify-content: center;
-	max-width: 200px;
-	max-height: 50px;
+	align-items: center;
+	background-color: fa255e;
+	color: #000000;
+	font-size: 1em;
+	max-width: 150px;
+	max-height: 30px;
 	border-radius: 5px;
-	margin: auto;
+	margin: 15px auto;	
+}
+
+.login-button:hover {
+	color: #fff;
+}
+
+.register-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1em;
+	margin: 15px auto;	
+}
+
+/*dar estilo al carousel*/
+.carousel {
+	text-align: center;
+	background-image: url(../images/beach-group.jpg);
+	background-size: cover;
+	padding: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/*dar estilo a la barra de búsqueda*/
+.search-bar {
+	background-color: #303030;
+}
+.search-bar h3 {
+	color: f1f1f1;
+}
+
+.search-button {
 	background-color: fa255e;
 }
 
-.logo {
-	width: 130px;
+/*dar estilo a los eventos destacados*/
+.tile-image {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-[class*=col] {
-	border: dashed 1px red;
+.tile-label {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	background-color: rgba(0,0,0,0.6);
+	color: #f1f1f1;
+	padding: 8px;
 }
+
+/*dar estilo al contenido del footer*/
+.footer-list {
+	font-size: 0.8em;
+}
+
+.copyright img {
+	width: 30px;
+}
+
+.copyright p {
+	font-size: 0.6em;
+}
+
+.social-links {
+	text-align: right;
+}
+
+/*dar estilo al search bar*/
+.search-bar {
+	
+}
+
+/* styles temporales - prueba de estructura */
+/* [class*=col], .container { */
+	/* border: dashed 1px red; */
+/* } */
