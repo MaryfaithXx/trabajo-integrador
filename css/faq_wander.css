@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import "normalize.css";
+@import "bootstrap-grid.min.css";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto",Arial,sans-serif;
+	background-color: #f8e5e5;
+}
+
+button.btn.btn-link.collapsed {
+	background-color: #f8e5e5;
+	border-bottom-color:#fa255e;
+	border-top-color:#fa255e;
+	border-right-color:#fa255e;
+	border-left-color:#fa255e;
+	color:#fa255e;
+	border-radius: 6px;
+	margin-left: 8px;
+	}
+
+button.btn.btn-link.collapsed:hover {
+	color:black;
+}
+
+div.accordion {
+	margin left: 25px;
+	}
+
+div.card-body{
+	padding: 6px 6px;
+	margin-left: 6px;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
+a:hover {
+	color: #fa255e;
+}
+
+.main-header, .main-footer{
+	background-color: #303030;
+	color: #f1f1f1;
+}
+
+.iso {
+	float: left;
+	width: 50px;
+}
+
+.logo {
+	width: 100px;
+	margin: 10px 10px;
+}
+
+.login-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: fa255e;
+	color: #000000;
+	font-size: 1em;
+	max-width: 150px;
+	max-height: 30px;
+	border-radius: 5px;
+	margin: 15px auto;
+}
+
+.login-button:hover {
+	color: #fff;
+}
+
+.register-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1em;
+	margin: 15px auto;
+}
+
+.search-bar {
+	background-color: #303030;
+}
+.search-bar h3 {
+	color: f1f1f1;
+}
+
+.footer-list {
+	font-size: 0.8em;
+}
+.copyright img {
+	width: 30px;
+}
+
+.copyright p {
+	font-size: 0.6em;
+}
+
+.social-links {
+	text-align: right;
+}
