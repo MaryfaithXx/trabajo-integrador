@@ -53,11 +53,14 @@ width: 100%;
   color: #C39EA0;
 }
 .perfil a {
-  padding-left: 20px;
+
 }
 a {
 	display: inline-block;
 	text-decoration: none;
+}
+h3 {
+	padding-top: 20px;
 }
 
 .Ciudades {
@@ -87,6 +90,32 @@ a {
     padding: 0 10px;
   }
 
+
 .checked {
   color: orange;
+}
+
+.special-hr {
+	height: 6px;
+	border-right: none;
+	border-left: none;
+	border-top: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+}
+
+/*dar estilo al contenido del footer*/
+.footer-list {
+	font-size: 0.8em;
+}
+
+.copyright img {
+	width: 30px;
+}
+
+.copyright p {
+	font-size: 0.6em;
+}
+
+.social-links {
+	text-align: right;
 }
