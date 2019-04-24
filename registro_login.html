@@ -2,17 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/styles-registration.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
-    <div class="Titulo">
+    <!-- main-header -->
+    <header class="main-header">
+      <div class="row">
+        <div class="col-8">
+          <img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+          <img class="logo" src="images/wander-logo.png" alt="wander logotype"/>
+        </div>
+        <div class="col-2">
+          <a href="#" class="register-link">Registrarme</a>
+        </div>
+        <div class="col-2">
+          <a href="#" class="login-button">Inicio</a>
+        </div>
+      </div>
+    </header>
+    <!-- /main-header -->
+
+		<!-- formulario -->
+    <div class="titulo">
       <h1>Registro</h1>
     </div>
-    <div class="foto-perfil">
-      <img src="images/foto-perfil.jpg" alt="foto-perfil" width="150px">
-    </div>
-
-    <div class="Formulario">
+    <div class="row">
+      <div class="col-3">
+        <div class="foto-perfil">
+          <img class="perfil" src="images/foto-perfil.jpg" alt="foto-perfil" width="150px">
+        </div>
+      </div>
+      <div class="col-9">
+      <div class="formulario">
       <form class="" action="bienvenido.html" method="post">
         <p>
           <label for="nombre">
@@ -69,9 +93,57 @@
         </p>
 
       </form>
+      </div>
+      </div>
 
     </div>
+    <!-- formulario -->}
 
+    <!-- main footer -->
+		<footer class="main-footer">
+			<img src="images/skyline-banner.png" alt="skyline banner">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Quiénes somos</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Trabaje con nosotros</a></li>
+						<br>
+						<br>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Mi perfil</a></li>
+						<li><a href="#">Preguntas frecuentes</a></li>
+						<br>
+						<br>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Eventos</a></li>
+						<li><a href="#">Destinos</a></li>
+						<br>
+						<br>
+						<br>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 copyright">
+					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+					<p>© derechos reservados</p>
+				</div>
+				<div class="col-4 social-links">
+					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+					<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+				</div>
+			</div>
+		</footer>
+		<!-- /main footer -->
 
   </body>
 </html>

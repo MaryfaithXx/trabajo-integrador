@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import "normalize.css";
+@import "bootstrap-grid.min.css";
+
+
+/*resets de base*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto",Arial,sans-serif;
+	background-color: #f8e5e5;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
+a:hover {
+	color: #fa255e;
+}
+
+/*dar estilo al header*/
+.main-header, .main-footer{
+	background-color: #303030;
+	color: #f1f1f1;
+}
+
+.iso {
+	float: left;
+	width: 50px;
+}
+
+.logo {
+	width: 100px;
+	margin: 10px 10px;
+}
+/* estilo formulario de registro*/
+.titulo{
+    margin-left: 20px;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.row {
+  border-color: green;
+  border-width: 1px;
+  border-style: solid;
+
+}
+
+.foto-perfil {
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.formulario {
+  border-color: yellow;
+  border-width: 1px;
+  border-style: solid;
+}
+
+
+
+
+
+/*dar estilo al contenido del footer*/
+.footer-list {
+	font-size: 0.8em;
+}
+
+.copyright img {
+	width: 30px;
+}
+
+.copyright p {
+	font-size: 0.6em;
+}
+
+.social-links {
+	text-align: right;
+}
