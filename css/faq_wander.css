@@ -31,9 +31,28 @@ div.accordion {
 	margin left: 25px;
 	}
 
+
 div.card-body{
 	padding: 6px 6px;
 	margin-left: 6px;
+}
+
+/*sacar en el html el one y two, hacer todos card-body y eliminar este estilo*/
+div.card-body-one, div.card-body-two {
+	padding: 6px 6px;
+	margin-left: 6px;
+	display: none;
+}
+/*sacar en el html el one y two, hacer todos card-body y eliminar este estilo*/
+
+
+ul.accordion-list a{
+	display: flex;
+	color: #fa255e;
+	}
+
+ul.accordion-list a:hover {
+		color: black;
 }
 
 ul, ol {
@@ -60,6 +79,8 @@ a:hover {
 	background-color: #303030;
 	color: #f1f1f1;
 }
+
+
 
 .iso {
 	float: left;
