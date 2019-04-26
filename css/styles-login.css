@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import "normalize.css";
+@import "bootstrap-grid.min.css";
+
+
+/*resets de base*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto",Arial,sans-serif;
+	background-color: #f8e5e5;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
+a:hover {
+	color: #fa255e;
+}
+
+/*dar estilo al header*/
+.main-header, .main-footer{
+	background-color: #303030;
+	color: #f1f1f1;
+}
+
+.iso {
+	float: left;
+	width: 50px;
+}
+
+.logo {
+	width: 100px;
+	margin: 10px 10px;
+}
+
+/*dar estilo a la sección de inicio*/
+
+.login-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fa255e;
+	color: #000000;
+	font-size: 1em;
+	max-width: 150px;
+	max-height: 30px;
+	border-radius: 5px;
+	margin: 15px auto;
+}
+
+.login-button:hover {
+	color: #fff;
+}
+
+.register-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1em;
+	margin: 15px auto;
+}
+
+/* estilo formulario de registro*/
+.titulo{
+    margin-left: 20px;
+/* estilo temporal
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;*/
+}
+
+.formulario {
+	margin-left: 20px;
+	font-size: 1em;
+/* estilo temporal
+  border-color: yellow;
+  border-width: 1px;
+  border-style: solid;*/
+}
+
+.link-comun {
+	color: black;
+}
+
+.link-comun:hover {
+	color: #fa255e;
+}
+
+
+.boton{
+	background-color: #fa255e;
+	color: #000000;
+	border-radius: 5px;
+}
+
+.boton:hover{
+	color: #fff;
+}
+
+
+/*dar estilo al contenido del footer*/
+.footer-list {
+	font-size: 0.8em;
+}
+
+.copyright img {
+	width: 30px;
+}
+
+.copyright p {
+	font-size: 0.6em;
+}
+
+.social-links {
+	text-align: right;
+}
