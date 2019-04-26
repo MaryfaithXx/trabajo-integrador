@@ -100,32 +100,31 @@ h2 {
 	padding-top: 20px;
 }
 
-.Ciudades {
-  display: inline-flex;
-  justify-content: center;
-  background-color: #FA255E;
-  border-radius: 5px;
-  height: 25px;
-  padding: 0 10px;
-  }
-.Eventos
-{
-  display: inline-flex;
-  justify-content: center;
-  background-color: #FA255E;
-  border-radius: 5px;
-  height: 25px;
-    padding: 0 10px;
-  }
-.Conexiones
-{
-  display: inline-flex;
-  justify-content: center;
-  background-color: #FA255E;
-  border-radius: 5px;
-  height: 25px;
-    padding: 0 10px;
-  }
+
+
+	.column {
+  float: left;
+  max-width: 100px;
+	padding-left: 0px;
+	padding-right:0px;
+	margin: 10px;
+	position: relative;
+
+}
+
+
+.label {
+ position: absolute;
+ left: 0;
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: rgba(0,0,0,0.4);
+ color: #f1f1f1;
+ width: 100%;
+ text-align: center;
+ padding: 8px 0;
+}
+
 
 
 .checked {
@@ -140,10 +139,54 @@ h2 {
 	border-bottom: solid 1px #C39EA0;
 }
 
+.timeline {
+
+	height: auto;
+	margin:5px auto 0;
+	padding: 5px;
+
+}
+
+.timeline li{
+	position: relative;
+	list-style: none;
+
+}
+
+.timeline li .item {
+	position: relative;
+	min-height: 60px;
+
+	padding: 0 20px 20px 30px;
+	margin-left: 20px;
+	border-left: 1px solid;
+
+}
+
+.timeline li:last-child .item{
+		border-left: 1px solid transparent;
+}
+
+.timeline li .item span {
+	position: absolute;
+	top:-8px;
+	left:-20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #FA255E;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 50%;
+
+}
+
+/*
 .tituloEventos {
 	color: #C39EA0;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #FA255E;
-}
+} */
 
 /*dar estilo al contenido del footer*/
 .footer-list {
