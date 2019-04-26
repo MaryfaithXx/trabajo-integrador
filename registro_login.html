@@ -6,6 +6,7 @@
     <title>Registro</title>
     <link rel="stylesheet" href="css/styles-registration.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="icons/style-icons.css">
   </head>
   <body>
     <!-- main-header -->
@@ -30,15 +31,11 @@
       <h1>Registro</h1>
     </div>
     <div class="row">
-      <div class="col-3">
-        <div class="foto-perfil">
-          <img class="perfil" src="images/foto-perfil.jpg" alt="foto-perfil" width="150px">
-        </div>
-      </div>
-      <div class="col-9">
+      <div class="col-6">
       <div class="formulario">
-      <form class="" action="bienvenido.html" method="post">
+      <form class="" action="gracias-por-registrarte.html" method="post">
         <p>
+          <span class="icon-user"></span>
           <label for="nombre">
           Nombre:
           </label>
@@ -46,6 +43,7 @@
           <input id= "nombre" type="text" name="nombre" value="" placeholder="Ingrese su nombre aqui...">
         </p>
         <p>
+          <span class="icon-user"></span>
           <label for="apellido">
           Apellido:
           </label>
@@ -53,6 +51,7 @@
           <input id="apellido" type="text" name="apellido" value="" placeholder="Ingrese su apellido aqui...">
         </p>
         <p>
+          <span class="icon-email"></span>
           <label for="email">
           Email:
           </label>
@@ -60,6 +59,7 @@
           <input id="email" type="email" name="email" value="" placeholder="nombre@example.com">
         </p>
         <p>
+          <span class="icon-user"></span>
           <label for="usuario">
           Usuario:
           </label>
@@ -67,6 +67,7 @@
           <input id="usuario" type="text" name="Usuario" value="" placeholder="Ingrese un usuario...">
         </p>
         <p>
+          <span class="icon-key"></span>
           <label for="pass">
           Contraseña:
           </label>
@@ -74,6 +75,7 @@
           <input id="pass" type="password" name="pass" value="">
         </p>
         <p>
+          <span class="icon-lock"></span>
           <label for="repetir-pass">
           Repetir Contraseña:
           </label>
@@ -89,7 +91,8 @@
           <input type="checkbox" name="terminos" value="s" checked >Acepto términos y condiciones
         </p>
         <p>
-          <input type="submit" name="" value="Registrarme">
+          <span class="icon-login"></span>
+          <input class="boton" type="submit" name="" value="Registrarme">
         </p>
 
       </form>
