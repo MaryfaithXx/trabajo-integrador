@@ -99,7 +99,7 @@ a:hover {
 }
 
 .login-button {
-	isplay: flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: fa255e;
@@ -122,7 +122,7 @@ a:hover {
 	align-items: center;
 	color: #fff;
 	font-size: 1em;
-	margin: 15px auto;
+	margin: 20px auto;
 }
 
 
