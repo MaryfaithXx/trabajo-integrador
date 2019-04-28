@@ -1,22 +1,36 @@
-# trabajo-integrador
-Proyecto para trabajo integrador Full Stack
+# Wander
+Wander es una red social orientada a viajeros. Con Wander se pueden buscar eventos en tu ciudad de destino y conectar con otras personas en la zona para armas grupos de viaje.
 
-El trabajo integrador, el cual da comienzo hoy y se extenderá hasta el final del curso, parte de una de tres ramas la cual debe ser elegida al comenzar.
+Este es un proyecto en progreso y se esperan cambios.
 
-Las tres ramas a elegir son:
+## Cómo colaborar
+Hacer un 'clone' del repositorio en el disco local. Para dar estilo a una nueva sección, copiar los estilos del body, header y footer en una nueva hoja de estilo. Ésta será luego compilada en la hoja de estilos general al aprobarse el look & feel.
 
-- eMarket
+Todos los cambios deben ser debidamente informados con 'git commit -m ""'.
 
-- Red Social
+## Reglas generales de estilo
+### Librerias:
+* bootstrap-grid.min.css
+* normalize.css
 
-- Juego de preguntas y respuestas
+### Tipografia:
+* font-family: "Roboto",Arial,sans-serif;
+* font-size: 0.8em;
+* font-size (buttons): 1em;
 
-La rama elegida al comenzar el trabajo se mantendrá durante el resto de la cursada. NO SE PODRÁ CAMBIAR.
+### Paleta de colores: 
+* background-color: #f8e5e5;
+* background-color (header/footer): #303030;
+* color (text over #303030): #f1f1f1;
+* color (links on hover): #fa255e;
+* button/highlights: #fa255e;
+* color (text over #fa255e): #000000;
 
-Cada Sprint tendrá una duración aproximada de 12 días calendario, en donde se les dará a cada grupo unas consignas obligatorias a entregar y otras consignas opcionales.
+## Creadores
+* **MaryfaithXx** - maquetado de wander_index y estilo general
+* **Mayra1988** - maquetado de login - register y estilos particulares
+* **Missnatir** - maquetado de profile y estilos particulares
+* **Yqueirolo** - maquetado de FAQ y estilos particulares
 
-Previo o inclusive en la fecha de entrega, cada grupo debe revisar con el docente lo pactado, de manera presencial pudiendo utilizar tiempo de clase, recreos o en el espacio de co-learning para tal fin.
-
-La entrega de cada sprint, se deberá hacer a través de un enlace al repositorio de Github debidamente documentado (readme).
-
-Todos los sprints deben estar terminados al final de la cursada para la aprobación del curso, en cuyo momento habrá una presentación del trabajo en donde se busca que las/os alumnas/os cuenten, tanto los problemas y soluciones funcionales como técnicos que encontraron en el camino. Se recomienda dejar asentado internamente dichos eventos durante la cursada.
+## Licencia
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
