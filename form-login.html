@@ -11,19 +11,21 @@
   <body>
     <!-- main-header -->
     <header class="main-header">
-      <div class="row">
-        <div class="col-8">
-          <img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-          <img class="logo" src="images/wander-logo.png" alt="wander logotype"/>
-        </div>
-        <div class="col-2">
-          <a href="#" class="register-link">Registrarme</a>
-        </div>
-        <div class="col-2">
-          <a href="#" class="login-button">Inicio</a>
-        </div>
-      </div>
-    </header>
+			<div class="container-fluid">
+			<div class="row">
+				<div class="col-8">
+					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+					<a href="wander_index.html"><img class="logo" src="images/wander-logo.png" alt="wander logotype"/></a>
+				</div>
+				<div class="col-2">
+					<a href="form-registration.html" class="register-link">Registrarme</a>
+				</div>
+				<div class="col-2">
+					<a href="form-login.html" class="login-button">Inicio</a>
+				</div>
+			</div>
+			</div>
+		</header>
     <!-- /main-header -->
 
 		<!-- formulario -->
@@ -31,7 +33,7 @@
       <h1>Ingreso</h1>
     </div>
     <div class="row">
-      <div class="col-6">
+      <div class="col-12 col-md-3">
       <div class="formulario">
       <form class="" action="bienvenido.html" method="post">
         <p>
@@ -75,15 +77,17 @@
       </form>
       </div>
       </div>
-      <div class="col-6">
-        <div class=""> Tambien podes ingresar a traves de:
-          <div class="ingreso-fb">
+      <div class="col-12 col-md-3">
+        <div class="ingreso-container">
+          <div class="ingreso"> Tambien podes ingresar a traves de:
+            </div>
+          <div class="ingreso">
             <span class="icon-facebook"></span><a class="link-comun" href="#">Facebook</a>
           </div>
-          <div class="ingreso-insta">
+          <div class="ingreso">
             <span class="icon-instagram"></span><a class="link-comun" href="#">Instagram</a>
           </div>
-          <div class="ingreso-google">
+          <div class="ingreso">
             <span class="icon-google"><a class="link-comun" href="#">Google</a>
           </div>
           </div>
@@ -91,49 +95,51 @@
       </div>
     </div>
 
-    <!-- formulario -->}
+    <!-- formulario -->
 
     <!-- main footer -->
-		<footer class="main-footer">
-			<img src="images/skyline-banner.png" alt="skyline banner">
-			<div class="row">
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Quiénes somos</a></li>
-						<li><a href="#">Contacto</a></li>
-						<li><a href="#">Trabaje con nosotros</a></li>
-						<br>
-						<br>
-					</ul>
+    <footer class="main-footer">
+		<img src="images/skyline-banner.png" alt="skyline banner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="#">Quiénes somos</a></li>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="#">Trabaje con nosotros</a></li>
+							<br>
+							<br>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="form-login.html">Inicio</a></li>
+							<li><a href="profile.html">Mi perfil</a></li>
+							<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
+							<br>
+							<br>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="#">Eventos</a></li>
+							<li><a href="#">Destinos</a></li>
+							<br>
+							<br>
+							<br>
+						</ul>
+					</div>
 				</div>
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Mi perfil</a></li>
-						<li><a href="#">Preguntas frecuentes</a></li>
-						<br>
-						<br>
-					</ul>
-				</div>
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Eventos</a></li>
-						<li><a href="#">Destinos</a></li>
-						<br>
-						<br>
-						<br>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8 copyright">
-					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-					<p>© derechos reservados</p>
-				</div>
-				<div class="col-4 social-links">
-					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-					<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+				<div class="row">
+					<div class="col-8 copyright">
+						<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+						<p>© derechos reservados</p>
+					</div>
+					<div class="col-4 social-links">
+						<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+						<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+					</div>
 				</div>
 			</div>
 		</footer>
