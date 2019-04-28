@@ -10,17 +10,19 @@
 	<body>
 		<!-- main-header -->
 		<header class="main-header">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="col-8">
 					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-					<img class="logo" src="images/wander-logo.png" alt="wander logotype"/>
+					<a href="wander_index.html"><img class="logo" src="images/wander-logo.png" alt="wander logotype"/></a>
 				</div>
 				<div class="col-2">
-					<a href="#" class="register-link">Registrarme</a>
+					<a href="form-registration.html" class="register-link">Registrarme</a>
 				</div>
 				<div class="col-2">
-					<a href="#" class="login-button">Inicio</a>
+					<a href="form-login.html" class="login-button">Inicio</a>
 				</div>
+			</div>
 			</div>
 		</header>
 		<!-- /main-header -->
@@ -39,9 +41,9 @@
 					<br>
 					<br>
 					Esta plataforma te ayudara a encontrar tu próximo destino, cuando y como disfrutarlo.Y a través de nuestra red social podrás recibir consejos, dar referencias y con “mi comunidad Wander” encontraras tu próximo compañero de aventuras.
-          <br>
 					<br>
-				 ¡Pero la próxima historia la contas vos!</p>
+					<br>
+					¡Pero la próxima historia la contas vos!</p>
 				<br>
 				<br>
 				<br
@@ -51,23 +53,38 @@
 
 		<!-- search bar -->
 		<section class="search-bar">
-			<h3>Busqueda por destino</h3>
-			<form class="search-form" action="#">
-			  <label for="destination">Destino:</label>
-			  <input type="text" id="destination" placeholder="City/Country" name="destination">
-			  <label for="date">Desde:</label>
-			  <input type="date" id="from-date" placeholder="dd/mm/yyyy" name="from-date">
-			  <label for="date">Hasta:</label>
-			  <input type="date" id="to-date" placeholder="dd/mm/yyyy" name="to-date">
-			  <button class="search-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
-			<br>
-			<br>
-			</form>
+			<div class="container-fluid">
+				<h3>Busqueda por destino</h3>
+				<form class="search-form" action="#">
+					<div class="row">
+					  <div class="col-12 col-md-3">
+						  <label for="destination">Destino:</label>
+						  <br>
+						  <input type="text" id="destination" placeholder="City/Country" name="destination">
+					  </div>
+					  <div class="col-12 col-md-3">
+						  <label for="date">Desde:</label>
+						  <br>
+						  <input type="date" id="from-date" placeholder="dd/mm/yyyy" name="from-date">
+					  </div>
+					  <div class="col-12 col-md-3">
+						<label for="date">Hasta:</label>
+						<br>
+						<input type="date" id="to-date" placeholder="dd/mm/yyyy" name="to-date">
+					  </div>
+					  <div class="col-12 col-md-3">
+					  <br>
+					  <button class="search-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
+					  </div>
+					</div>
+				</form>
+			</div>
 		</section>
 		<!-- /search bar -->
 
 		<!-- featured events -->
 		<div class="container-fluid">
+			<h3>Eventos destacados</h3>
 			<section class="featured-events">
 				<div class="row">
 					<div class="col-12 col-md-6">
@@ -89,12 +106,12 @@
 					<div class="col-6 col-md-3">
 						<div class="row">
 							<div class="col-12">
-								<img class="tile-image" src="images/holi-festival.jpg" alt="holi festival">
-								<span class="tile-label">Holi Festival</span>
+								<img class="tile-image" src="images/desert-group.jpg" alt="desert group">
+								<span class="tile-label">Travesia por el desierto</span>
 							</div>
 							<div class="col-12">
-								<img class="tile-image" src="images/aurora-borealis.jpg" alt="aurora borealis">
-								<span class="tile-label">Aurora Boreal</span>
+								<img class="tile-image" src="images/great-barrier-reef.jpg" alt="great barrier reef">
+								<span class="tile-label">Bucea en la Gran Barrera</span>
 							</div>
 						</div>
 					</div>
@@ -123,45 +140,47 @@
 
 		<!-- main footer -->
 		<footer class="main-footer">
-			<img src="images/skyline-banner.png" alt="skyline banner">
-			<div class="row">
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Quiénes somos</a></li>
-						<li><a href="#">Contacto</a></li>
-						<li><a href="#">Trabaje con nosotros</a></li>
-						<br>
-						<br>
-					</ul>
+		<img src="images/skyline-banner.png" alt="skyline banner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="#">Quiénes somos</a></li>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="#">Trabaje con nosotros</a></li>
+							<br>
+							<br>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="form-login.html">Inicio</a></li>
+							<li><a href="profile.html">Mi perfil</a></li>
+							<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
+							<br>
+							<br>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4">
+						<ul class="footer-list">
+							<li><a href="#">Eventos</a></li>
+							<li><a href="#">Destinos</a></li>
+							<br>
+							<br>
+							<br>
+						</ul>
+					</div>
 				</div>
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Mi perfil</a></li>
-						<li><a href="#">Preguntas frecuentes</a></li>
-						<br>
-						<br>
-					</ul>
-				</div>
-				<div class="col-12 col-md-4">
-					<ul class="footer-list">
-						<li><a href="#">Eventos</a></li>
-						<li><a href="#">Destinos</a></li>
-						<br>
-						<br>
-						<br>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8 copyright">
-					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-					<p>© derechos reservados</p>
-				</div>
-				<div class="col-4 social-links">
-					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-					<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+				<div class="row">
+					<div class="col-8 copyright">
+						<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+						<p>© derechos reservados</p>
+					</div>
+					<div class="col-4 social-links">
+						<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+						<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+						<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+					</div>
 				</div>
 			</div>
 		</footer>
