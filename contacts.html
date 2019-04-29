@@ -1,12 +1,11 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Wander - Conectando viajeros en el mundo</title>
+		<title>Contactos</title>
 		<link rel="stylesheet" href="css/styles-contacts.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="icons/style-icons.css">
+ 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	</head>
 	<body>
 		<!-- main-header -->
@@ -29,16 +28,16 @@
 		<!-- /main-header -->
 
 		<!-- search contacts -->
-		<section class="search-contacts">
-			<div class="contacts">
+		<section class="busca-contactos">
+			<div class="contactos">
 				<h1>Contactos</h1>
 			</div>
 			<div class="form-search-contacts">
-				<form class="search-contacts" action="#">
+				<form class="contacts" action="#">
 					<label for="contacts">Buscar contactos:</label>
 					<br>
 					<input type="text" id="buscador-contactos" placeholder="Ingresa un contacto" name="buscador-contactos">
-					<span class="icon-magnifying-glass"></span>
+					<button class="search-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
 				</form>
 			</div>
 		</section>
@@ -46,6 +45,7 @@
 		<!-- /search contacts -->
 
 		<!-- /contact list -->
+	<div class="contact-list">
 		<div class="row">
 			<div class="col-1">
 				<div class="imagen-perfil">
@@ -93,56 +93,57 @@
 				<button class="search-button" type="submit"><i class="fas fa-search"></i> Mensaje</button>
 			</div>
 		</div>
+	</div>
 	<!-- /contact list -->
 
 
 
 
 
-		<!-- main footer -->
-		<footer class="main-footer">
-		<img src="images/skyline-banner.png" alt="skyline banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="#">Quiénes somos</a></li>
-							<li><a href="#">Contacto</a></li>
-							<li><a href="#">Trabaje con nosotros</a></li>
-							<br>
-							<br>
-						</ul>
-					</div>
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="form-login.html">Inicio</a></li>
-							<li><a href="profile.html">Mi perfil</a></li>
-							<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
-							<br>
-							<br>
-						</ul>
-					</div>
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="#">Eventos</a></li>
-							<li><a href="#">Destinos</a></li>
-							<br>
-							<br>
-							<br>
-						</ul>
-					</div>
+	<!-- main footer -->
+	<footer class="main-footer">
+	<img src="images/skyline-banner.png" alt="skyline banner">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Quiénes somos</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Trabaje con nosotros</a></li>
+						<br>
+						<br>
+					</ul>
 				</div>
-				<div class="row">
-					<div class="col-8 copyright">
-						<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-						<p>© derechos reservados</p>
-					</div>
-					<div class="col-4 social-links">
-						<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-						<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-						<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-					</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="form-login.html">Inicio</a></li>
+						<li><a href="profile.html">Mi perfil</a></li>
+						<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
+						<br>
+						<br>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<ul class="footer-list">
+						<li><a href="#">Eventos</a></li>
+						<li><a href="#">Destinos</a></li>
+						<br>
+						<br>
+						<br>
+					</ul>
 				</div>
 			</div>
-		</footer>
-		<!-- /main footer -->
+			<div class="row">
+				<div class="col-8 copyright">
+					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
+					<p>© derechos reservados</p>
+				</div>
+				<div class="col-4 social-links">
+					<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+					<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /main footer -->

@@ -97,15 +97,11 @@ a:hover {
   border-style: solid;*/
 }
 
-
-.boton{
+.search-button {
 	background-color: #fa255e;
-	color: #000000;
+	border-style: none;
+	padding: 4px 15px;
 	border-radius: 5px;
-}
-
-.boton:hover{
-	color: #fff;
 }
 
 /*dar estilo al contenido del footer*/

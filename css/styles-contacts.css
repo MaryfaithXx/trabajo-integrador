@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @import "normalize.css";
 @import "bootstrap-grid.min.css";
@@ -50,7 +50,9 @@ a:hover {
 	width: 100px;
 	margin: 10px 10px;
 }
+
 /*dar estilo a la sección de inicio*/
+
 .login-button {
 	display: flex;
 	justify-content: center;
@@ -78,25 +80,21 @@ a:hover {
 	margin: 20px auto;
 }
 
-
 /*dar estilo a la barra de búsqueda de contactos*/
-.contacts {
-	margin: 10px;
+.busca-contactos {
+	margin: 20px;
 }
-
-.search-contacts {
-	margin: 10px;
-}
-
 
 .search-button {
 	background-color: #fa255e;
+	border-style: none;
+	padding: 4px 15px;
+	border-radius: 5px;
 }
 
 /*dar estilo al contact-list*/
-
-.row {
-	margin: 10px;
+.contact-list {
+	margin: 20px;
 }
 
 .imagen-perfil {
@@ -104,9 +102,9 @@ a:hover {
 	height: 40px;
 }
 
+/*dar estilo al contenido del footer*/
 
 
-/*dar estilo al footer*/
 .copyright img {
 	width: 30px;
 }
@@ -118,8 +116,3 @@ a:hover {
 .social-links {
 	text-align: right;
 }
-
-/* styles temporales - prueba de estructura */
-/* [class*=col], .container { */
-	/* border: dashed 1px red; */
-/* } */
