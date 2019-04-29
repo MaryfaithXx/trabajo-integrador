@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 @import "normalize.css";
 @import "bootstrap-grid.min.css";
@@ -62,7 +62,7 @@ a:hover {
 	max-height: 50px;
 	padding: 5px;
 	border-radius: 5px;
-	margin: 15px auto;	
+	margin: 15px auto;
 }
 
 .login-button:hover {
@@ -75,7 +75,7 @@ a:hover {
 	align-items: center;
 	color: #fff;
 	font-size: 1em;
-	margin: 20px auto;	
+	margin: 20px auto;
 }
 
 /*dar estilo al carousel*/
@@ -85,9 +85,13 @@ a:hover {
 	background-size: cover;
 	color: f1f1f1;
 	text-shadow: 2px 2px 2px #000;
-	padding: 30px;
+	padding: 30px 150px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+.carousel p {
+	font-size: 1.2em;
 }
 
 

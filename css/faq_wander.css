@@ -10,6 +10,7 @@
 body {
 	font-family: "Roboto",Arial,sans-serif;
 	background-color: #f8e5e5;
+	font-size: 0.8em;
 }
 
 button.btn.btn-link.collapsed {
@@ -38,7 +39,7 @@ div.card-body{
 }
 
 /*sacar en el html el one y two, hacer todos card-body y eliminar este estilo*/
-div.card-body-one, div.card-body-two {
+div.card-body-one, div.card-body-two, div.card-body-three,div.card-body-four,div.card-body-five {
 	padding: 6px 6px;
 	margin-left: 6px;
 	display: none;
@@ -87,8 +88,6 @@ a:hover {
 	color: #f1f1f1;
 }
 
-
-
 .iso {
 	float: left;
 	width: 50px;
@@ -107,7 +106,8 @@ a:hover {
 	color: #000000;
 	font-size: 1em;
 	max-width: 150px;
-	max-height: 30px;
+	max-height: 50px;
+	padding: 5px;
 	border-radius: 5px;
 	margin: 15px auto;
 }
@@ -122,15 +122,9 @@ a:hover {
 	align-items: center;
 	color: #fff;
 	font-size: 1em;
-	margin: 15px auto;
+	margin: 20px auto;
 }
 
-.search-bar {
-	background-color: #303030;
-}
-.search-bar h3 {
-	color: f1f1f1;
-}
 
 .footer-list {
 	font-size: 0.8em;
