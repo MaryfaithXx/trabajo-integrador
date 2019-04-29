@@ -21,6 +21,13 @@ ul, ol {
 img {
 width: 100%;
 }
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
 a:hover {
 	color: #fa255e;
 }
@@ -90,7 +97,7 @@ a:hover {
 a {
 	display: inline-block;
 	text-decoration: none;
-	color: #000000;
+	color: #f1f1f1;
 }
 
 a:hover {
