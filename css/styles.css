@@ -55,7 +55,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: fa255e;
+	background-color: #fa255e;
 	color: #000000;
 	font-size: 1em;
 	max-width: 150px;
@@ -83,7 +83,7 @@ a:hover {
 	text-align: center;
 	background-image: url(../images/beach-group.jpg);
 	background-size: cover;
-	color: f1f1f1;
+	color: #f1f1f1;
 	text-shadow: 2px 2px 2px #000;
 	padding: 30px 150px;
 	margin-top: 15px;
@@ -101,13 +101,18 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 15px 0;
 }
 .search-bar h3, label {
-	color: f1f1f1;
+	color: #f1f1f1;
+	margin-top: 0px;
 }
 
 .search-button {
-	background-color: fa255e;
+	background-color: #fa255e;
+	border-style: none;
+	padding: 4px 15px;
+	border-radius: 5px;
 }
 
 /*dar estilo a los eventos destacados*/
