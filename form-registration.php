@@ -8,26 +8,12 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
   </head>
-  <body>
-    <!-- main-header -->
-    <header class="main-header">
-			<div class="container-fluid">
-			<div class="row">
-				<div class="col-8">
-					<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-					<a href="wander_index.html"><img class="logo" src="images/wander-logo.png" alt="wander logotype"/></a>
-				</div>
-				<div class="col-2">
-					<a href="form-registration.html" class="register-link">Registrarme</a>
-				</div>
-				<div class="col-2">
-					<a href="form-login.html" class="login-button">Inicio</a>
-				</div>
-			</div>
-			</div>
-		</header>
-    <!-- /main-header -->
-
+	<body>
+		<!-- main-header -->
+		<?php
+			require_once("partials/nav-bar.php");
+		?>
+		<!-- /main-header -->
 
 		<!-- formulario -->
     <div class="fondo">
@@ -74,54 +60,10 @@
     </div>
 
     <!-- formulario -->
-
     <!-- main footer -->
-    <footer class="main-footer">
-		<img src="images/skyline-banner.png" alt="skyline banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="#">Quiénes somos</a></li>
-							<li><a href="#">Contacto</a></li>
-							<li><a href="#">Trabaje con nosotros</a></li>
-							<br>
-							<br>
-						</ul>
-					</div>
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="form-login.html">Inicio</a></li>
-							<li><a href="profile.html">Mi perfil</a></li>
-							<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
-							<br>
-							<br>
-						</ul>
-					</div>
-					<div class="col-12 col-md-4">
-						<ul class="footer-list">
-							<li><a href="#">Eventos</a></li>
-							<li><a href="#">Destinos</a></li>
-							<br>
-							<br>
-							<br>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-8 copyright">
-						<img class="iso" src="images/wander-iso.png" alt="wander isotype"/>
-						<p>© derechos reservados</p>
-					</div>
-					<div class="col-4 social-links">
-						<a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
-						<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-						<a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<?php
+			require_once("partials/footer.php");
+		?>
 		<!-- /main footer -->
-
-  </body>
+	</body>
 </html>
