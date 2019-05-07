@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @import "normalize.css";
-@import "bootstrap-grid.min.css";
+@import "bootstrap.min.";
 
 * {
 	box-sizing: border-box;
@@ -13,49 +13,11 @@ body {
 	font-size: 0.8em;
 }
 
-button.btn.btn-link.collapsed {
-	background-color: #f8e5e5;
-	border-bottom-color:#fa255e;
-	border-top-color:#fa255e;
-	border-right-color:#fa255e;
-	border-left-color:#fa255e;
-	color:#fa255e;
-	border-radius: 6px;
-	margin-left: 8px;
-	}
-
-button.btn.btn-link.collapsed:hover {
-	color:black;
-}
-
-div.accordion {
-	margin left: 2px;
-	}
-
-
-div.card-body{
-	padding: 6px 6px;
-	margin-left: 6px;
-}
-
-/*sacar en el html el one y two, hacer todos card-body y eliminar este estilo*/
-div.card-body-one, div.card-body-two, div.card-body-three,div.card-body-four,div.card-body-five {
-	padding: 6px 6px;
-	margin-left: 6px;
-	display: none;
-}
-/*sacar en el html el one y two, hacer todos card-body y eliminar este estilo*/
-
-
-ul.accordion-list a{
-	display: flex;
-	color: #fa255e;
-	font-size: 1.5em;
-	}
-
-ul.accordion-list a:hover {
+ a.card-link{
+    background-color: #fa255e;
 		color: black;
-}
+    text-decoration: none;
+    }
 
 ul, ol {
 	padding: 0;
@@ -73,11 +35,6 @@ img {
 	width: 100%;
 }
 
-a {
-	display: inline-block;
-	text-decoration: none;
-	color: #f1f1f1;
-}
 
 a:hover {
 	color: #fa255e;
@@ -102,7 +59,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: fa255e;
+	background-color: #fa255e;
 	color: #000000;
 	font-size: 1em;
 	max-width: 150px;
@@ -113,7 +70,7 @@ a:hover {
 }
 
 .login-button:hover {
-	color: #fff;
+	color: #fa255e;
 }
 
 .register-link {
@@ -139,4 +96,5 @@ a:hover {
 
 .social-links {
 	text-align: right;
+	color:#fa255e;
 }
