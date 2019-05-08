@@ -6,9 +6,6 @@
     <title>Ingreso</title>
     <link rel="stylesheet" href="css/styles-login.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="icons/style-icons.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   </head>
   <body>
     <!-- main-header -->
@@ -20,86 +17,118 @@
 					<a href="wander_index.html"><img class="logo" src="images/wander-logo.png" alt="wander logotype"/></a>
 				</div>
 				<div class="col-2">
-					<a href="form-registration.html" class="register-link">Registrarme</a>
+          <a href="form-registration.php" class="register-link">Registrarme</a>
 				</div>
 				<div class="col-2">
-					<a href="form-login.html" class="login-button">Inicio</a>
+          <a id="login-button" href="#">Inicio</a>
 				</div>
 			</div>
 			</div>
 		</header>
     <!-- /main-header -->
 
-		<!-- formulario -->
-    <div class="titulo">
-      <h1>Ingreso</h1>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-3">
-      <div class="formulario">
-      <form class="" action="bienvenido.html" method="post">
-        <p>
-          <span class="icon-email"></span>
-          <label for="email">
-          Email:
-          </label>
-          <br>
-          <input id="email" type="email" name="email" value="" placeholder="nombre@example.com">
-        </p>
-        <p>
-          <span class="icon-user"></span>
-          <label for="usuario">
-          Usuario:
-          </label>
-          <br>
-          <input id="usuario" type="text" name="Usuario" value="" placeholder="Ingrese un usuario...">
-        </p>
-        <p>
-          <span class="icon-key"></span>
-          <label for="pass">
-          Contraseña:
-          </label>
-          <br>
-          <input id="pass" type="password" name="pass" value="">
-        </p>
-        <p>
-          <label for="recordarme"></label>
-          <input type="checkbox" name="recordarme" value="s" checked > Recordarme
-        </p>
-        <p>
-          <span class="icon-login"></span>
-          <input class="search-button" type="submit" name="" value="Ingresar">
-        </p>
-        <p>
-          <a class="link-comun" href="#">Olvide mi usuario</a>
-          <br>
-          <a class="link-comun" href="#">Olvide mi contraseña</a>
-        </p>
-
-      </form>
-      </div>
-      </div>
-      <div class="col-12 col-md-3">
-        <div class="ingreso-container">
-          <div class="ingreso"> Tambien podes ingresar a traves de:
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+    <!-- formulario -->
+        <div class="titulo">
+        <h1>Ingreso</h1>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="formulario">
+              <form class="" action="profile.html" method="post">
+                <p>
+                  <label for="email">Email:</label>
+                  <br>
+                  <input id="email" type="email" name="email" value="" placeholder="nombre@example.com">
+                  </p>
+                <p>
+                  <label for="usuario">Usuario:</label>
+                  <br>
+                  <input id="usuario" type="text" name="Usuario" value="" placeholder="Ingrese un usuario...">
+                </p>
+                <p>
+                  <label for="pass">Contraseña:</label>
+                  <br>
+                  <input id="pass" type="password" name="pass" value="">
+                </p>
+                <p>
+                  <label for="recordarme"></label>
+                  <input type="checkbox" name="recordarme" value="s" checked > Recordarme
+                </p>
+                <p>
+                  <input class="search-button" type="submit" name="" value="Ingresar">
+                </p>
+                <p>
+                  <a class="link-comun" href="#">Olvide mi usuario</a>
+                  <br>
+                  <a class="link-comun" href="#">Olvide mi contraseña</a>
+                </p>
+              </form>
             </div>
-          <div class="ingreso">
-            <span class="icon-facebook"></span><a class="link-comun" href="#">Facebook</a>
           </div>
-          <div class="ingreso">
-            <span class="icon-instagram"></span><a class="link-comun" href="#">Instagram</a>
-          </div>
-          <div class="ingreso">
-            <span class="icon-google"><a class="link-comun" href="#">Google</a>
-          </div>
+          <div class="col-12 col-md-6">
+            <div class="ingreso-container">
+              <br>
+              <br>
+              <div class="ingreso"> Tambien podes ingresar a traves de:</div>
+              <span class="ingreso">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square"> Facebook</i></a>
+                <br>
+                <br>
+              </span>
+              <span class="ingreso">
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"> Linkedin</i></a>
+                <br>
+                <br>
+              </span>
+              <span class="ingreso">
+                <a href="https://twitter.com/"><i class="fab fa-twitter-square"> Twitter</i></a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- formulario -->
+    <!-- The Modal -->
 
-    <!-- main footer -->
+
+
+<!-- JS del modal -->
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("login-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+</script>
+<!-- JS del modal -->
+
+
+   <!-- main footer -->
     <footer class="main-footer">
 		<img src="images/skyline-banner.png" alt="skyline banner">
 			<div class="container-fluid">

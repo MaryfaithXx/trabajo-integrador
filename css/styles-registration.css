@@ -53,7 +53,7 @@ a:hover {
 
 /*dar estilo a la sección de inicio*/
 
-.login-button {
+#login-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,7 +67,7 @@ a:hover {
 	margin: 15px auto;
 }
 
-.login-button:hover {
+#login-button:hover {
 	color: #fff;
 }
 
@@ -79,6 +79,68 @@ a:hover {
 	font-size: 1em;
 	margin: 20px auto;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: pink;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* estilo formulario de login*/
+
+.titulo{
+		display: flex;
+		justify-content: center;
+}
+
+.link-comun {
+	color: black;
+}
+
+.link-comun:hover {
+	color: #fa255e;
+}
+
+.search-button {
+	background-color: #fa255e;
+	border-style: none;
+	padding: 4px 15px;
+	border-radius: 5px;
+}
+
+
 
 /* estilo formulario de registro*/
 .fondo {
