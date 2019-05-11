@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 @import "normalize.css";
-@import "bootstrap-grid.min.css";
+@import "bootstrap.min.css";
 
 
 /*resets de base*/
@@ -35,7 +35,7 @@ a:hover {
 	color: #fa255e;
 }
 
-/*dar estilo al header*/
+/*dar estilo al header y footer*/
 .main-header, .main-footer{
 	background-color: #303030;
 	color: #f1f1f1;
@@ -50,6 +50,7 @@ a:hover {
 	width: 100px;
 	margin: 10px 10px;
 }
+
 /*dar estilo a la sección de inicio*/
 #login-button {
 	display: flex;
@@ -123,19 +124,12 @@ a:hover {
 		justify-content: center;
 }
 
-.link-comun {
-	color: black;
-}
-
-.link-comun:hover {
+.modal-link {
 	color: #fa255e;
 }
 
-.search-button {
-	background-color: #fa255e;
-	border-style: none;
-	padding: 4px 15px;
-	border-radius: 5px;
+.modal-link:hover {
+	text-decoration: underline;
 }
 
 /*dar estilo al carousel*/
@@ -168,7 +162,8 @@ a:hover {
 	margin-top: 0px;
 }
 
-.search-button {
+/*dar estilo a los botones de submit*/
+.submit-button {
 	background-color: #fa255e;
 	border-style: none;
 	padding: 4px 15px;
@@ -195,6 +190,7 @@ a:hover {
 }
 
 .copyright p {
+	padding-top: 8px;
 	font-size: 0.6em;
 }
 
@@ -202,7 +198,42 @@ a:hover {
 	text-align: right;
 }
 
+/* estilo formulario de registro*/
+.register-body {
+	background-image: url(../images/ibiza.jpg);
+	background-size: cover;
+	padding: 20px;
+	margin-top:15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
 
+.titulo{
+  display: flex;
+	justify-content: center;
+}
+
+.formulario{
+	display: flex;
+	justify-content: center;
+}
+
+.final-form{
+	display: flex;
+	justify-content: center;
+}
+
+.boton{
+	display: flex;
+	justify-content: center;
+}
+
+.btn-btn-primary {
+	background-color: #fa255e;
+	border-style: none;
+	padding: 4px 15px;
+	border-radius: 5px;
+}
 
 
 

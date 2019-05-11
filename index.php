@@ -1,4 +1,6 @@
-<?php 
+<?php
+	$docTitle = "Wander - Conectando viajeros por el mundo";
+	
 	require_once("partials/head.php");
 ?>
 	<body>
@@ -55,7 +57,7 @@
 					  </div>
 					  <div class="col-12 col-md-3">
 					  <br>
-					  <button class="search-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
+					  <button class="submit-button" type="submit"><i class="fas fa-search"></i> Buscar</button>
 					  </div>
 					</div>
 				</form>

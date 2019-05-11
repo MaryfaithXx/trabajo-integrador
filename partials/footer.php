@@ -13,9 +13,9 @@
 			</div>
 			<div class="col-12 col-md-4">
 				<ul class="footer-list">
-					<li><a href="form-login.html">Inicio</a></li>
-					<li><a href="profile.html">Mi perfil</a></li>
-					<li><a href="faq_wander.html">Preguntas frecuentes</a></li>
+					<li><a href="index.php">Inicio</a></li>
+					<li><a href="profile.php">Mi perfil</a></li>
+					<li><a href="faq.php">Preguntas frecuentes</a></li>
 					<br>
 					<br>
 				</ul>
