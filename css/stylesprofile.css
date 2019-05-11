@@ -8,7 +8,7 @@
 
 body {
 	font-family: "Roboto",Arial,sans-serif;
-	background-color: #fff;
+	background-color: #ffffff;
 	font-size: 0.8em;
 }
 
@@ -20,7 +20,9 @@ ul, ol {
 
 img {
 width: 100%;
+height: 100%;
 }
+
 
 a {
 	display: inline-block;
@@ -76,28 +78,64 @@ a:hover {
 	margin: 20px auto;
 }
  /*Estilo del Perfil*/
+ .profile{
+	 width: 100%;
+	 position: relative;
+	 padding-top: 20px;
+	 margin-right: 15px;
+	 padding-left: 20px;
+}
 
-.perfil img {
-  max-width: 50%;
-  padding-left: 20px;
-  padding-top: 20px;
-  float:left;
-  max-width: 250px;
-  margin-right: 15px;
+ .profile .cover {
+  display: block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  border: 5px solid #FFF;
+}
+.profile .user {
+  position: relative;
+	padding: 0px 5px 5px;
+}
 
+.profile .user .avatar {
+  position: absolute;
+  left: 20px;
+  top: -80px;
+  z-index: 2;
+	max-width: 50%;
+	border-radius: 50%;
+	max-width: 150px;
+}
+
+.profile .info {
+	display: block;
+  float: left;
+  margin: -35px 0px 0px 180px;
   }
 
-.perfil p {
-  padding-top: 20px;
-  font-size: 1.2em;
-  text-align: justify;
-  color: #C39EA0;
+ .profile {
+  width: 100%;
+  position: relative;
+  background: #FFF;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
+
+.coverImage {
+	width:800px;
+	 height:300px;
+}
+.profilePic {
+border-radius: 50%;
+}
+
 
 a {
 	display: inline-block;
 	text-decoration: none;
-	color: #f1f1f1;
+	color: #000000;
 }
 
 a:hover {
@@ -108,8 +146,12 @@ h2 {
 	padding-top: 20px;
 }
 
+/*Perfil de viajero*/
 
+  .tituloEventos{
+		padding-top: 20px;
 
+	}
 	.column {
   float: left;
   max-width: 100px;
@@ -119,7 +161,6 @@ h2 {
 	position: relative;
 
 }
-
 
 .label {
  position: absolute;
@@ -133,10 +174,19 @@ h2 {
  padding: 8px 0;
 }
 
+.interest {
+	background-color: #C39EA0;
+	border-radius:8px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
 
+}
 
 .checked {
-  color: orange;
+  color: #FA255E;
 }
 
 .special-hr {
@@ -147,6 +197,7 @@ h2 {
 	border-bottom: solid 1px #C39EA0;
 }
 
+/*Eventos*/
 .timeline {
 
 	height: auto;
@@ -190,11 +241,11 @@ h2 {
 
 }
 
-/*
-.tituloEventos {
-	color: #C39EA0;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px #FA255E;
-} */
+/*Grupos*/
+
+.groups-image {
+	padding: 15px;
+}
 
 /*dar estilo al contenido del footer*/
 .footer-list {
