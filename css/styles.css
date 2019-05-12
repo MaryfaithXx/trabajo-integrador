@@ -99,7 +99,7 @@ a:hover {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 25%; /* Could be more or less, depending on screen size */
+  width: 35vw; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -118,11 +118,6 @@ a:hover {
 }
 
 /* estilo formulario de login*/
-
-.titulo{
-		display: flex;
-		justify-content: center;
-}
 
 .modal-link {
 	color: #fa255e;
@@ -213,12 +208,7 @@ a:hover {
 	justify-content: center;
 }
 
-.formulario{
-	display: flex;
-	justify-content: center;
-}
-
-.final-form{
+.form-row {
 	display: flex;
 	justify-content: center;
 }
@@ -295,7 +285,7 @@ a:hover {
 		padding-top: 20px;
 
 	}
-	
+
 .column {
 	float: left;
 	max-width: 100px;
