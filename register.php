@@ -1,27 +1,18 @@
 <?php
+  // Incluimos el controlador del registro-login
+  // De esta manera tengo el scope a la funciones que necesito
+  require_once 'register-login-controller.php';
+
   $docTitle = "Wander - Registro";
 
   require_once("partials/head.php");
- ?>
 
-		<?php
-			require_once("partials/nav-bar.php");
-		?>
+	require_once("partials/nav-bar.php");
 
-  <?php
-  $countries = [
-    'ar' => 'Argentina',
-    'bo' => 'Bolivia',
-    'br' => 'Brasil',
-    'co' => 'Colombia',
-    'cl' => 'Chile',
-    'ec' => 'Ecuador',
-    'pa' => 'Paraguay',
-    'pe' => 'Perú',
-    'uy' => 'Uruguay',
-    've' => 'Venezuela',
-  ];
-   ?>
+  // Creamos esta variable con Array vacío para que no de error al entrar por GET
+	$errorsInRegister = [];
+
+	?>
 
 		<!-- formulario -->
     <div class="register-body">
@@ -29,15 +20,15 @@
         <h1>Registro</h1>
       </div>
       <div class="formulario">
-        <form>
+        <form method="post" enctype="multipart/form-data">
           <div class="form-row">
             <div class="form-group col-md-3">
             <!--<label >Nombre completo</label>-->
-              <input type="text" class="form-control" placeholder="Nombre y apellido">
+              <input type="text" name="name" class="form-control" placeholder="Nombre y apellido">
             </div>
             <div class="form-group col-md-3">
             <!--<label >Nombre usuario</label>-->
-              <input type="text" class="form-control" placeholder="Nombre de usuario">
+              <input type="text" name="name-user" class="form-control" placeholder="Nombre de usuario">
             </div>
           </div>
           <div class="form-row">
@@ -58,17 +49,17 @@
             </div>
             <div class="form-group col-md-3">
             <!--<label for="inputEmail4">Email</label>-->
-              <input type="email" class="form-control" id="inputEmail4" placeholder="E-mail">
+              <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="E-mail">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
             <!--<label for="inputPassword4">Password</label>-->
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+            <input type="password" name="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
           </div>
             <div class="form-group col-md-3">
             <!--<label for="inputPassword4">Password</label>-->
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirme contraseña">
+            <input type="password" name="rePassword" class="form-control" id="inputPassword4" placeholder="Confirme contraseña">
             </div>
           </div>
           <div class="form-row">
@@ -98,6 +89,3 @@
 			require_once("partials/footer.php");
 		?>
 		<!-- /main footer -->
-
-  </body>
-</html>
