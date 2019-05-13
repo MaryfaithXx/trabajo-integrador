@@ -11,7 +11,7 @@
 
   // Creamos esta variable con Array vacío para que no de error al entrar por GET
 	$errorsInRegister = [];
-
+  $errorsInRegister = registerValidate();
 	?>
 
 		<!-- formulario -->
@@ -29,6 +29,9 @@
             <div class="form-group col-md-3">
             <!--<label >Nombre usuario</label>-->
               <input type="text" name="name-user" class="form-control" placeholder="Nombre de usuario">
+              <div class="invalid-feedback">
+                <?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
+              </div>
             </div>
           </div>
           <div class="form-row">
@@ -69,7 +72,7 @@
                 <input
                   type="file"
                   name="avatar"
-                  class="custom-file-input <?= isset($errorsInRegister['avatar']) ? 'is-invalid' : null; ?>"
+                  class="custom-file-input"
                 >
                 <label class="custom-file-label">Subi tu foto de perfil...</label>
               </div>
