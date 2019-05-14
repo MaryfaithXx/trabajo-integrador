@@ -11,7 +11,12 @@
 
   // Creamos esta variable con Array vacío para que no de error al entrar por GET
 	$errorsInRegister = [];
-  $errorsInRegister = registerValidate();
+
+  if($_POST) {
+    var_dump($_POST);
+    $errorsInRegister = registerValidate();
+  }
+
 	?>
 
 		<!-- formulario -->
@@ -24,35 +29,35 @@
           <div class="form-row">
             <div class="form-group col-md-3">
             <!--<label >Nombre completo</label>-->
-              <input type="text" name="name" class="form-control" placeholder="Nombre y apellido">
+              <input type="text" name="name" class="form-control" placeholder="Nombre y apellido" value="<?= isset($_POST["name"]) ? $_POST["name"] : null ?>">
+              <div>
+                <?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
+              </div>
             </div>
             <div class="form-group col-md-3">
             <!--<label >Nombre usuario</label>-->
-              <input type="text" name="name-user" class="form-control" placeholder="Nombre de usuario">
-              <div class="invalid-feedback">
-                <?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
-              </div>
+              <input type="text" name="name-user" class="form-control" placeholder="Nombre de usuario" value="">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
               <select name="country" class="form-control">
                 <option value="">Elegí un país</option>
-                <option value="">Argentina</option>
-                <option value="">Bolivia</option>
-                <option value="">Brasil</option>
-                <option value="">Colombia</option>
-                <option value="">Chile</option>
-                <option value="">Ecuador</option>
-                <option value="">Perú</option>
-                <option value="">Uruguay</option>
-                <option value="">Paraguay</option>
-                <option value="">Venezuela</option>
+                <option value="ar">Argentina</option>
+                <option value="bo">Bolivia</option>
+                <option value="br">Brasil</option>
+                <option value="co">Colombia</option>
+                <option value="ch">Chile</option>
+                <option value="ec">Ecuador</option>
+                <option value="pe">Perú</option>
+                <option value="ur">Uruguay</option>
+                <option value="pa">Paraguay</option>
+                <option value="ve">Venezuela</option>
               </select>
             </div>
             <div class="form-group col-md-3">
             <!--<label for="inputEmail4">Email</label>-->
-              <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="E-mail">
+              <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="E-mail" value="">
             </div>
           </div>
           <div class="form-row">
