@@ -95,17 +95,6 @@
                       <?= $country ?>
                   </option>
                 <?php endforeach; ?>
-                <!--<option value="ar">Argentina</option>
-                <option value="bo">Bolivia</option>
-                <option value="br">Brasil</option>
-                <option value="co">Colombia</option>
-                <option value="ch">Chile</option>
-                <option value="ec">Ecuador</option>
-                <option value="pe">Perú</option>
-                <option value="ur">Uruguay</option>
-                <option value="pa">Paraguay</option>
-                <option value="ve">Venezuela</option>-->
-
               </select>
               <div class="invalid-feedback">
                 <?= isset($errorsInRegister['country']) ? $errorsInRegister['country'] : null; ?>
@@ -152,14 +141,17 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-3">
-              <!--<label>Imagen de perfil</label>-->
+              <!--Imagen de perfil-->
               <div class="custom-file">
                 <input
                   type="file"
                   name="avatar"
-                  class="custom-file-input"
+                  class="custom-file-input <?= isset($errorsInRegister['avatar']) ? 'is-invalid' : null; ?>"
                 >
                 <label class="custom-file-label">Subi tu foto de perfil...</label>
+                <div class="invalid-feedback">
+                  <?= isset($errorsInRegister['avatar']) ? $errorsInRegister['avatar'] : null; ?>
+                </div>
               </div>
             </div>
           </div>
