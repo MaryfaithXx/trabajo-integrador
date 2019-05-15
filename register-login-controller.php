@@ -19,12 +19,12 @@ function registerValidate(){
 
   // Si está vació el campo: $name
   if ( empty($name) ) {
-    $errors['name'] = 'El campo nombre no puede estar vacío';
+    $errors['name'] = 'El nombre y apellido es obligatorio';
   }
 
   // Si está vació el campo: $nameUser
   if ( empty($nameUser) ) {
-    $errors['name-user'] = 'El campo nombre de usuario no puede estar vacío';
+    $errors['name-user'] = 'El nombre de usuario es obligatorio';
   }
 
   // Si está vació el campo: $country
@@ -34,21 +34,21 @@ function registerValidate(){
 
   // Si está vació el campo: $email
   if ( empty($email) ) {
-    $errors['email'] = 'El campo email es obligatorio';
+    $errors['email'] = 'El e-mail es obligatorio';
   } elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) { // Si el campo $email NO es un formato de email válido
-    $errors['email'] = 'Introducí un formato de email válido';
+    $errors['email'] = 'Introducí un formato de e-mail válido';
   }// elseif ( emailExist($email) ) { // Si el email ya existe, es porque alguien ya se registró con el mismo
-    $errors['email'] = 'Ese correo ya está registrado';
+  //  $errors['email'] = 'Ese correo ya está registrado';
 //  }
 
   // Si está vació el campo: $password
   if ( empty($password) ) {
-    $errors['password'] = 'El campo password es obligatorio';
+    $errors['password'] = 'La contraseña es obligatoria';
   }
 
   // Si está vació el campo: $rePassword
   if ( empty($rePassword) ) {
-    $errors['rePassword'] = 'El campo repetir password es obligatorio';
+    $errors['rePassword'] = 'Repetir contraseña es obligatorio';
   } elseif ($password != $rePassword) { // Si el valor de los campos $password y $rePassword son distintos
     $errors['password'] = 'Las contraseñas no coinciden';
     $errors['rePassword'] = 'Las contraseñas no coinciden';

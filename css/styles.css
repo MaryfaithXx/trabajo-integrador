@@ -223,6 +223,20 @@ a:hover {
 	border-style: none;
 	padding: 4px 15px;
 	border-radius: 5px;
+	font-size:110%
+}
+
+.btn-btn-primary:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.invalid-feedback {
+	font-size:110%;
+	color:black;
+	background-color: #fa255e;
+	padding-left: 12px;
+	border-radius: 5px
 }
 
 
