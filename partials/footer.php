@@ -7,8 +7,6 @@
 					<li><a href="#">Quiénes somos</a></li>
 					<li><a href="#">Contacto</a></li>
 					<li><a href="#">Trabaje con nosotros</a></li>
-					<br>
-					<br>
 				</ul>
 			</div>
 			<div class="col-12 col-md-4">
@@ -16,17 +14,12 @@
 					<li><a href="index.php">Inicio</a></li>
 					<li><a href="profile.php">Mi perfil</a></li>
 					<li><a href="faq.php">Preguntas frecuentes</a></li>
-					<br>
-					<br>
 				</ul>
 			</div>
 			<div class="col-12 col-md-4">
 				<ul class="footer-list">
 					<li><a href="#">Eventos</a></li>
 					<li><a href="#">Destinos</a></li>
-					<br>
-					<br>
-					<br>
 				</ul>
 			</div>
 		</div>
