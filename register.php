@@ -37,10 +37,18 @@
 
     // La función registerValidate() nos retorna el array de errores que almacenamos en esta variable
 		$errorsInRegister = registerValidate();
-    }
 
-  //var_dump($_POST);
-  // $errorsInRegister = registerValidate();
+
+    if ( !$errorsInRegister ) {
+      $elNombreDeLaImagen = saveImage();
+
+      $_POST["avatar"] = $elNombreDeLaImagen;
+
+    /*  echo "<pre>";
+      var_dump($_POST);
+      echo "</pre>";*/
+    }
+  }
 
   require_once("partials/nav-bar.php");
 
