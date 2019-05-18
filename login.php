@@ -1,3 +1,47 @@
+<?php
+	// Incluimos el controlador del registro-login
+	// De esta manera tengo el scope a la funciones que necesito
+	require_once 'register-login-controller.php';
+
+	// PREGUNTAR POR QUE GENERA LOOP
+	// // Si está logueda la persona la redirijo al profile
+	// if ( isLogged() ) {
+	// 	header('location: profile.php');
+	// 	exit;
+	// }
+
+
+	// Generamos nuestro array de errores interno
+	$errorsInLogin = [];
+
+	// Persistimos el email
+	$email = '';
+
+	if ($_POST) {
+		// Persistimos el email con lo vino por $_POST
+		$email = trim($_POST['email']);
+
+		// La función loginValidate() nos retorna el array de errores que almacenamos en esta variable
+		$errorsInLogin = loginValidate();
+
+		if ( !$errorsInLogin ) {
+			// Traemos al usuario que vamos a loguear
+			$userToLogin = getUserByEmail($email);
+
+			// Preguntamos si quiere ser recordado
+			if ( isset($_POST['rememberUser']) ) {
+				setcookie('userLoged', $email, time() + 3000);
+			}
+
+			// Logeamos al usuario
+			login($userToLogin);
+		}
+	}
+
+?>
+
+
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 	<div class="modal-content">
@@ -7,7 +51,7 @@
 		<h1>Iniciar sesion</h1>
 		</div>
 		<div class="titulo">
-			<form class="" action="profile.html" method="post">
+			<form class="" method="post">
 				<p>
 					<!--<label for="email">Email:</label> -->
 					<input id="email" type="email" name="email" value="" placeholder="Ingrese su email">
@@ -18,7 +62,7 @@
 				</p>
 				<p>
 					<!--<label for="pass">Contraseña:</label> -->
-					<input id="pass" type="password" name="pass" value=""placeholder="Ingrese su contraseña">
+					<input id="password" type="password" name="password" value=""placeholder="Ingrese su contraseña">
 				</p>
 				<p>
 					<label for="recordarme"></label>

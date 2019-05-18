@@ -3,22 +3,20 @@
   // De esta manera tengo el scope a la funciones que necesito
   require_once 'register-login-controller.php';
 
+  // Si está logueda la persona la redirijo al profile
+	if ( isLogged() ) {
+		header('location: profile.php');
+		exit;
+	}
+
   $docTitle = "Wander - Registro";
 
   require_once("partials/head.php");
 
-  $countries = [
-		'ar' => 'Argentina',
-		'bo' => 'Bolivia',
-		'br' => 'Brasil',
-		'co' => 'Colombia',
-		'cl' => 'Chile',
-		'ec' => 'Ecuador',
-		'pa' => 'Paraguay',
-		'pe' => 'Perú',
-		'uy' => 'Uruguay',
-		've' => 'Venezuela',
-	];
+
+  // trae el listado de countries por API
+    $countries = file_get_contents('http://country.io/names.json');
+    $countries = json_decode($countries);
 
   // Creamos esta variable con Array vacío para que no de error al entrar por GET
 	$errorsInRegister = [];
@@ -38,11 +36,25 @@
     // La función registerValidate() nos retorna el array de errores que almacenamos en esta variable
 		$errorsInRegister = registerValidate();
 
-
+    // Si no hay errores en el registro
+		// Cuando no hay errores guardo la imagen y los datos
+		// if ( count($errorsInRegister) == 0 ) {
     if ( !$errorsInRegister ) {
-      $elNombreDeLaImagen = saveImage();
 
-      $_POST["avatar"] = $elNombreDeLaImagen;
+      // Guardo la imagen y obtengo el nombre aleatorio creado
+      $imgName = saveImage();
+
+      // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+      $_POST["avatar"] = $imgName;
+
+      // Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
+			$theUser = saveUser();
+
+      // Al momento en que se registar vamos a mantener la sesión abierta
+			setcookie('userLoged', $theUser['email'], time() + 300);
+
+			// Logueo al usuario
+			login($theUser);
 
     /*  echo "<pre>";
       var_dump($_POST);
