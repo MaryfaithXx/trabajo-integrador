@@ -1,8 +1,21 @@
 <?php
+	// Incluimos el controlador del registro-login
+	// De esta manera tengo el scope a la funciones que necesito
+	require_once 'register-login-controller.php';
+
+	// Si no está logueda la persona la redirijo al login
+	if ( !isLogged() ) {
+		header('location: login.php');
+		exit;
+	}
+
 	$docTitle = "Wander - Mi perfil";
-	
-	require_once("partials/head.php");
+	require_once 'partials/head.php';
+
+	$theUser = $_SESSION['userLoged'];
 ?>
+
+
 	<body>
 		<!-- main-header -->
 		<?php
@@ -21,12 +34,12 @@
 						</div>
 						<div class="user">
 							<div class="avatar">
-								<img src="images/blank-profile-picture.png" alt="foto de Perfil" class="profilePic">
+								<img src="data/avatars/<?= $theUser['avatar']; ?>" alt="imagen usuario" class="avatarUser">
 							</div>
 							<div class="info">
-								<h2> Pussy Cat </h2>
+								<h3> <?= $theUser['name']; ?> </h3>
 								<p><i class="fa fa-map-marker" aria-hidden="true"></i> ¿Dónde estás ahora? -   <i class="fa fa-globe"></i> País de Residencia</p>
-								<p><i class="fa fa-flag" aria-hidden="true"></i> País de Origen  - <i class="fa fa-bolt" aria-hidden="true"></i>      Idiomas</p>
+								<p><i class="fa fa-flag" aria-hidden="true"></i> <?= $theUser['country']; ?> <i class="fa fa-bolt" aria-hidden="true"></i>      Idiomas</p>
 								<a href="#Editar" class="modal-link"> Editar Perfil </a>
 							</div>
 						</div>
@@ -38,7 +51,8 @@
 
 				<!--Perfil Viajero-->
 				<div class="col-12 col-md-4">
-					<h1 class="tituloEventos"> Perfil de Viajero</h1>
+					<h2 class="tituloEventos"> Perfil de Viajero</h2>
+
 					<div class="container actividades">
 						<div class="row">
 							<div class="col-3 column">
@@ -50,20 +64,27 @@
 								<span class= "label"> 14 <br> EVENTOS</span>
 							</div>
 							<div class="col-3 column">
-								<img src="images/conexiones.png" alt="conexiones">
-								<span class= "label"> 120 CONEXIONES</span>
+								<a href="connections.html">
+									<img src="images/conexiones.png" alt="conexiones">
+										<span class= "label"> 120 CONEXIONES</span>
+								</a>
+
 							</div>
 						</div>
 					</div>
+					<br>
+					<br>
 					<!--Intereses-->
 					<div class="Interests">
-						<h2> Intereses </h2>
+						<h3> Intereses </h3>
 						<a class="interest" href="#DeportesExtremos">Deportes Extremos</a>
 						<a class="interest" href="#ComidaAsiatica">Comida Asiática</a>
 						<a class="interest" href="#Naturaleza">Naturaleza</a>
 					</div>
+					<br>
+					<br>
 					<div class="rating">
-						<h2> Rating</h2>
+						<h4> Rating</h4>
 						<span class="fa fa-star checked fa-2x"></span>
 						<span class="fa fa-star checked fa-2x"></span>
 						<span class="fa fa-star checked fa-2x"></span>
@@ -71,7 +92,7 @@
 						<span class="fa fa-star fa-2x"></span>
 					</div>
 				</div>
-				<!--/columna 2-->	
+				<!--/columna 2-->
 			</div>
 			<br>
 			<br>
@@ -83,9 +104,9 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12 col-md-8">
-					<h1 class="tituloEventos">Eventos</h1>
+					<h2 class="tituloEventos">Eventos</h2>
 					<ul class="timeline">
-					<h2>2019</h2>
+					<h3>2019</h3>
 						<li>
 							<div class="item">
 								<span> Abr </span>
@@ -116,11 +137,11 @@
 					</ul>
 				</div>
 				<!--/Eventos-->
-			
+
 				<!-- Grupos-->
 
 				<div class="col-12 col-md-4">
-					<h1 class="tituloEventos"> Grupos </h1>
+					<h2 class="tituloEventos"> Grupos </h2>
 					<div class="row">
 						<div class="col-12">
 							<img class="groups-image" src="images/asian-food.jpg" alt="asian food">
@@ -137,7 +158,7 @@
 
 			</div>
 		</div>
-		
+
 		<!-- main footer -->
 		<?php
 		require_once("partials/footer.php");

@@ -256,7 +256,7 @@ header a, footer a {
 	margin-bottom: 20px;
 	padding-left: 20px;
 	padding-bottom: 5px;
-	background: #FFF;	
+	background: #FFF;
 }
 
 .profile .cover {
@@ -273,9 +273,9 @@ header a, footer a {
 	padding: 0px 5px 5px;
 }
 
-.profile .user .avatar {
+.profile .user .avatar .avatarUser {
 	position: absolute;
-	left: 20px;
+	left: 30px;
 	top: -80px;
 	z-index: 1;
 	max-width: 50%;
