@@ -32,7 +32,7 @@
 		<div class="row">
 			<div class="col-1">
 				<div class="profile-image">
-					<img src="images/foto-perfil.jpg" alt="">
+					<img src="images/blank-profile-picture.png" alt="foto perfil">
 				</div>
 			</div>
 			<div class="col-3">
@@ -48,7 +48,7 @@
 		<div class="row">
 			<div class="col-1">
 				<div class="profile-image">
-					<img src="images/foto-perfil.jpg" alt="">
+					<img src="images/blank-profile-picture.png" alt="foto perfil">
 				</div>
 			</div>
 			<div class="col-3">
@@ -64,7 +64,7 @@
 		<div class="row">
 			<div class="col-1">
 				<div class="profile-image">
-					<img src="images/foto-perfil.jpg" alt="">
+					<img src="images/blank-profile-picture.png" alt="foto perfil">
 				</div>
 			</div>
 			<div class="col-3">
