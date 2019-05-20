@@ -64,7 +64,7 @@
 								<span class= "label"> 14 <br> EVENTOS</span>
 							</div>
 							<div class="col-3 column">
-								<a href="connections.html">
+								<a href="connections.php">
 									<img src="images/conexiones.png" alt="conexiones">
 										<span class= "label"> 120 CONEXIONES</span>
 								</a>

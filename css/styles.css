@@ -57,23 +57,23 @@ a:hover {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #303030;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #303030;
+	min-width: 120px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
 }
 
 .dropdown-content a {
-  float: none;
-  padding: 12px 16px;
-  display: block;
-  text-align: left;
+	float: none;
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
 }
 
 .user-menu:hover .dropdown-content {
-  display: block;
+	display: block;
 }
 
 footer ul {
@@ -207,7 +207,7 @@ header a, footer a {
 	padding: 15px 0;
 }
 
-.search-bar h3, label {
+.search-bar h3, .search-bar label {
 	color: #f1f1f1;
 	margin-top: 0px;
 }
@@ -426,6 +426,21 @@ header a, footer a {
 
 .groups-image {
 	padding: 15px;
+}
+
+/*dar estilo a la barra de búsqueda de contactos*/
+.people-search {
+	margin: 20px;
+}
+
+/*dar estilo al contact-list*/
+.contact-list {
+	margin: 20px;
+}
+
+.profile-image {
+	width: 40px;
+	height: 40px;
 }
 
 /*dar estilo al FAQ*/
