@@ -30,6 +30,7 @@
   if($_POST) {
     // Las variables de persistencia les asigno el valor que vino de $_POST
 		$name = trim($_POST['name']);
+    $nameUser = trim($_POST['name-user']);
 		$email = trim($_POST['email']);
 		$countryFromPost = $_POST['country'];
 

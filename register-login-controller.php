@@ -44,7 +44,9 @@ function registerValidate(){
   // Si está vació el campo: $nameUser
   if ( empty($nameUser) ) {
     $errors['name-user'] = 'El nombre de usuario es obligatorio';
-  }
+  } elseif ( nameUserExist($nameUser) ) { // Si el nombre de usuario ya existe, es porque alguien ya se registró con el mismo
+    $errors['name-user'] = 'Ese usuario ya está registrado';
+ }
 
   // Si está vació el campo: $country
   if ( empty($country) ) {
@@ -68,15 +70,13 @@ function registerValidate(){
 
   if ( empty($password) ) {
     $errors['password'] = 'La contraseña es obligatoria';
+  } elseif (strlen($password) < 5){
+    $errors['password'] = 'La clave debe tener al menos 5 caracteres';
+  } elseif (strpos ($password, " ")) {
+    $errors['password'] = 'La clave no debe tener espacios vacios';
+  } elseif (!preg_match ('/DH/i', $password)){
+    $errors['password'] = 'La clave debe contener las letras DH (en mayúscula y seguidas)';
   }
-  // elseif (strlen($password) < 5){
-  //     $errors['password'] = "La clave debe tener al menos 5 caracteres";
-  // }
-  // elseif (strlen($password) > 16){
-  //     $errors['password'] = "La clave no puede tener más de 16 caracteres";
-  // } elseif (!preg_match('DH',$password){
-  //     $errors['password'] = "La clave debe incluir las letras DH (En mayuscula y seguidas)";
-  // }
 
   // Si está vació el campo: $rePassword
   if ( empty($rePassword) ) {
@@ -231,6 +231,27 @@ function emailExist($email) {
   return false;
 }
 
+// Función para preguntar si el nombre de usuario existe
+/*
+  Recibe como parámetro el nombre de usuario a buscar
+*/
+function nameUserExist($nameUser) {
+  // Traigo a todos los usuarios
+  $allUsers = getAllUsers();
+
+  // Recorro el array de usuarios
+  foreach ($allUsers as $oneUser) {
+    // Si la posición "email" del usuario en la iteración coincide con el email que pasé como parámetro
+    if ($oneUser['name-user'] == $nameUser) {
+      return true;
+    }
+  }
+
+  // Si termino de recorrer el array y no se encontró al email que pasé como parámetro
+  return false;
+}
+
+
 // Función para validar el login
 /*
   No le pasamos parámetros pues usamos la variables super global $_POST
@@ -242,12 +263,13 @@ function loginValidate() {
   // Trimeo los campos que recibo por $_POST
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
+  $nameUser = trim($_POST['name-user']);
 
   // Si está vacío el campo: $email
   if ( empty($email) ) {
-    $errors['email'] = 'El campo email es obligatorio';
+    $errors['email'] = 'El email es obligatorio';
   } elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) { // Si el campo $email no es un email válido
-    $errors['email'] = 'Introducí un formato de email válido';
+    $errors['email'] = 'Formato de email inválido';
   } elseif ( !emailExist($email) ) { // Si no existe el email
     // $errors['email'] = 'Ese correo no está registrado en nuestra base de datos';
     $errors['email'] = 'Las credenciales no coinciden';
@@ -256,14 +278,22 @@ function loginValidate() {
     $theUser = getUserByEmail($email);
 
     // Si el password que recibí por $_POST NO coincide con el password hasheado que está guardado en el usuario
-    if ( !password_verify($password, $theUser['password']) ) {
+    if ( !password_verify($password, $theUser['password'])) {
       $errors['password'] = 'Las credenciales no coinciden';
     }
   }
 
   // Si está vacío el campo: $password
   if ( empty($password) ) {
-    $errors['password'] = 'El campo password es obligatorio';
+    $errors['password'] = 'El password es obligatorio';
+  }
+
+  // Si está vacío el campo: $name-user
+  if ( empty($nameUser) ) {
+    $errors['name-user'] = 'El nombre de usuario es obligatorio';
+  } elseif ( !nameUserExist($nameUser) ) { // Si no existe el usuario
+    // $errors['name-user'] = 'Ese nombre de usuario no está registrado en nuestra base de datos';
+    $errors['name-user'] = 'Las credenciales no coinciden';
   }
 
   // Retorno el array de errores con los mensajes de error

@@ -16,10 +16,12 @@
 
 	// Persistimos el email
 	$email = '';
+	$nameUser = '';
 
 	if ($_POST) {
 		// Persistimos el email con lo vino por $_POST
 		$email = trim($_POST['email']);
+		$nameUser = trim($_POST['name-user']);
 
 		// La función loginValidate() nos retorna el array de errores que almacenamos en esta variable
 		$errorsInLogin = loginValidate();
@@ -52,21 +54,49 @@
 		</div>
 		<div class="titulo">
 			<form class="" method="post">
-				<p>
-					<!--<label for="email">Email:</label> -->
-					<input id="email" type="email" name="email" value="" placeholder="Ingrese su email">
-				</p>
-				<p>
-					<!--<label for="usuario">Usuario:</label> -->
-					<input id="usuario" type="text" name="Usuario" value="" placeholder="Ingrese su usuario">
-				</p>
-				<p>
-					<!--<label for="pass">Contraseña:</label> -->
-					<input id="password" type="password" name="password" value=""placeholder="Ingrese su contraseña">
-				</p>
+			<!--Email: -->
+				<div class="form-group">
+					<input
+						type="text"
+						name="email"
+						class="<?= isset($errorsInLogin['email']) ? 'form-control is-invalid' : null ?>"
+						value="<?= $email; ?>"
+						placeholder="Ingrese su email"
+					>
+					<div class="invalid-feedback">
+						<?= isset($errorsInLogin['email']) ? $errorsInLogin['email'] : null; ?>
+					</div>
+				</div>
+				<!--Usuario-->
+				<div class="form-group">
+					<input
+					 type="text"
+					 name="name-user"
+					 class="<?= isset($errorsInLogin['name-user']) ? 'form-control is-invalid' : null ?>"
+					 value="<?= $nameUser; ?>"
+					 placeholder="Ingrese su usuario"
+					>
+					<div class="invalid-feedback">
+						<?= isset($errorsInLogin['name-user']) ? $errorsInLogin['name-user'] : null; ?>
+					</div>
+				</div>
+				<div>
+					<!--Contraseña-->
+					<input
+					 	type="password"
+						name="password"
+						class="<?= isset($errorsInLogin['password']) ? 'form-control is-invalid' : null ?>"
+						placeholder="Ingrese su contraseña"
+					>
+					<div class="invalid-feedback">
+						<?= isset($errorsInLogin['password']) ? $errorsInLogin['password'] : null; ?>
+					</div>
+
+				</div>
 				<p>
 					<label for="recordarme"></label>
-					<input type="checkbox" name="recordarme" value="s" checked > Recordarme
+					<input type="checkbox" name="rememberUser">
+					Recordarme
 				</p>
 				<p>
 					<input class="submit-button" type="submit" name="" value="Ingresar">
