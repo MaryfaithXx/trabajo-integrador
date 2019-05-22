@@ -27,7 +27,7 @@
 	$email = '';
 	$countryFromPost = '';
 
-  if($_POST) {
+  if($_POST && isset($_POST["reg"])) {
     // Las variables de persistencia les asigno el valor que vino de $_POST
 		$name = trim($_POST['name']);
     $nameUser = trim($_POST['name-user']);
@@ -69,7 +69,7 @@
 
 		<!-- formulario -->
     <div class="register-body">
-      <div class="titulo">
+      <div class="centeredTitle">
         <h1>Registro</h1>
       </div>
       <div class="formulario">
@@ -177,7 +177,7 @@
             </div>
           </div>
           <div class="boton">
-            <button type="submit" class="btn-btn-primary">Registrarme</button>
+            <button type="submit" class="btn-btn-primary" name="reg">Registrarme</button>
           </div>
         </form>
       </div>

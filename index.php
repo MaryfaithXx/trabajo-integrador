@@ -1,6 +1,8 @@
 <?php
+	require_once("register-login-controller.php");
+
 	$docTitle = "Wander - Conectando viajeros por el mundo";
-	
+
 	require_once("partials/head.php");
 ?>
 	<body>

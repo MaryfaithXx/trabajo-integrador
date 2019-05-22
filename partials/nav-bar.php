@@ -1,5 +1,4 @@
 <!-- main-header -->
-	<?php require_once("register-login-controller.php"); ?>
 <header class="main-header">
 	<div class="container-fluid">
 		<div class="row">
@@ -15,6 +14,7 @@
 			<div class="col-2">
 				<a id="login-button" href="#">Iniciar sesion</a>
 			</div>
+			<?php require_once("login.php"); ?>
 			<?php else: ?>
 			<div class="col-2">
 				<img class="nav-avatar" src="data/avatars/<?= $_SESSION['userLoged']['avatar']; ?>">
@@ -25,12 +25,12 @@
 						<div class="dropdown-content">
 						  <a href="profile.php">Mi perfil</a>
 						  <a href="logout.php">Salir</a>
-						</div>		
+						</div>
 				</div>
 			</div>
 			<?php endif ?>
 		</div>
 	</div>
-	<?php require_once("login.php"); ?>
+
 </header>
 <!-- /main-header -->

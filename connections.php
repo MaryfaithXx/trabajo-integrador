@@ -1,4 +1,14 @@
 <?php
+// Incluimos el controlador del registro-login
+// De esta manera tengo el scope a la funciones que necesito
+require_once 'register-login-controller.php';
+
+// Si no está logueda la persona la redirijo al login
+if ( !isLogged() ) {
+	header('location: login.php');
+	exit;
+}
+
 	$docTitle = "Connections";
 
 	require_once("partials/head.php");
@@ -9,7 +19,7 @@
 			require_once("partials/nav-bar.php");
 		?>
 		<!-- /main-header -->
-		
+
 		<!-- search contacts -->
 		<section class="people-search">
 			<div class="people">
