@@ -13,8 +13,8 @@
 	require_once 'partials/head.php';
 
 	$theUser = $_SESSION['userLoged'];
-?>
 
+?>
 
 	<body>
 		<!-- main-header -->

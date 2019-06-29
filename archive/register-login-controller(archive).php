@@ -1,7 +1,4 @@
 <?php
-//Conectar a la DB y devolver un objeto PDO
-require_once 'partials/dbconnect.php';
-
 
 // Inicio la sesión para tener acceso a $_SESSION en todos los archivos
 session_start();
@@ -17,7 +14,7 @@ if ( isset($_COOKIE['userLoged']) && !isLogged() ) {
   // Busco al usuario por el email que tengo almacenado en la cookie
   $theUser = getUserByEmail($_COOKIE['userLoged']);
 
-  // Guardo en sesión al usuario que busqué anteriormente
+  // Guardo en sesión al usuario que bisqué anteiormente
   $_SESSION['userLoged'] = $theUser;
 }
 
@@ -32,7 +29,7 @@ function registerValidate(){
 
   // Definimos las variables locales que almacenan lo que nos llegó por $_POST y $_FILES
   $name = trim($_POST['name']);
-  $nameUser = trim($_POST['name_user']);
+  $nameUser = trim($_POST['name-user']);
   $country = $_POST['country'];
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
@@ -46,9 +43,9 @@ function registerValidate(){
 
   // Si está vació el campo: $nameUser
   if ( empty($nameUser) ) {
-    $errors['name_user'] = 'El nombre de usuario es obligatorio';
+    $errors['name-user'] = 'El nombre de usuario es obligatorio';
   } elseif ( nameUserExist($nameUser) ) { // Si el nombre de usuario ya existe, es porque alguien ya se registró con el mismo
-    $errors['name_user'] = 'Ese usuario ya está registrado';
+    $errors['name-user'] = 'Ese usuario ya está registrado';
  }
 
   // Si está vació el campo: $country
@@ -130,7 +127,7 @@ function saveImage() {
   return $finalName;
 }
 
-/*// Función para generar un ID
+// Función para generar un ID
 function generateID() {
   // Traigo a todos los usuarios
   $allUsers = getAllUsers();
@@ -145,22 +142,9 @@ function generateID() {
 
   // Retorno el ID del último usuario registrado + 1
   return $lastUser['id'] + 1;
-}*/
-
-//Traer a todos los usuarios del JSON
-function importJSON () {
-		// Obtengo el contenido del archivo JSON
-	  $fileContent = file_get_contents(USERS_JSON_PATH);
-
-	  // Decodifico el JSON a un array asociativo, importante el "true"
-	  $allUsers = json_decode($fileContent, true);
-
-		// Retorno el array de usuarios
-		return $allUsers;
 }
 
-/* // Función traer todo del JSON (sprint 2)
-
+// Función traer todo del JSON
 function getAllUsers() {
   // Obtengo el contenido del archivo JSON
   $fileContent = file_get_contents(USERS_JSON_PATH);
@@ -170,91 +154,36 @@ function getAllUsers() {
 
   // Retorno el array de usuarios
   return $allUsers;
-} */
-
-function jsonMigrate()
-{
-	global $base;
-	$users = getAllUsers();
-
-	if ( !$users ) {
-		$usersFromJson = importJSON();
-
-		foreach ($usersFromJson as $oneUser) {
-			try {
-				$query = $base->prepare("INSERT INTO users(name, name_user, country, email, password, avatar) values (?, ?, ?, ?, ?, ?)");
-				$query->execute([$oneUser['name'], $oneUser['name_user'], $oneUser['country'], $oneUser['email'], $oneUser['password'], $oneUser['avatar']]);
-			} catch (PDOException $error) {
-				return false;
-			}
-		}
-		return true;
-	}
 }
-
-//Traer todos los usuarios de SQL DB
-function getAllUsers() {
-	global $base;
-	try {
-		$query = $base->prepare("SELECT * from users order by id");
-		$query->execute();
-	} catch(PDOException $error) {
-		die('Error de base de datos');
-	}
-	$allUsers = $query->fetchAll(PDO::FETCH_ASSOC);
-
-	return $allUsers;
-}
-
-
 
 // Función para guardar al usuario
 function saveUser() {
   // Trimeamos los valores que vinieron por $_POST
   $_POST['name'] = trim($_POST['name']);
-  $_POST['name_user'] = trim($_POST['name_user']);
+  $_POST['name-user'] = trim($_POST['name-user']);
   $_POST['country'] = trim($_POST['country']);
   $_POST['email'] = trim($_POST['email']);
 
   // Hasheo el password del usuario
   $_POST['password'] = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
-  $avatar = $_POST['avatar'];
 
-/*   // Genero el ID y lo guardo en una posición de $_POST llamada "id"
-  $_POST['id'] = generateID(); */
+  // Genero el ID y lo guardo en una posición de $_POST llamada "id"
+  $_POST['id'] = generateID();
 
   // Elimino de $_POST la posición "rePassword" ya que no me interesa guardar este dato en mi DB (Data Base)
   unset($_POST['rePassword']);
 
-  //Traigo los usuarios almacenados en el JSON.
-  $migratedDB = jsonMigrate();
-
-  // Guardar los usuarios en la tabla users de wanderdb
-  try {
-	global $base;
-	$query = $base->prepare("INSERT INTO users (name, name_user, country, email, password, avatar) values (?, ?, ?, ?, ?, ?)");
-	$query->execute([$_POST['name'], $_POST['name_user'], $_POST['country'], $_POST['email'], $_POST['password'], $avatar]);
-
-	$lastId = $base->lastInsertId();
-
-	$query2 = $base->prepare("SELECT * FROM users WHERE id = ?");
-	$query2->execute(12);
-	$finalUser = $query2->fetch(PDO::FETCH_ASSOC);
-} catch(PDOException $error) {
-	die('Error de base de datos guardando usuario');
-}
-
-/* // En la variable $finalUser guardo el array de $_POST
+  // En la variable $finalUser guardo el array de $_POST
   $finalUser = $_POST;
 
-   // Obtengo todos los usuarios
+  // Obtengo todos los usuarios
   $allUsers = getAllUsers();
 
   // En la última posición del array de usuarios, inserto al usuario nuevo
   $allUsers[] = $finalUser;
 
   // Guardo todos los usuarios de vuelta en el JSON
-  file_put_contents(USERS_JSON_PATH, json_encode($allUsers)); */
+  file_put_contents(USERS_JSON_PATH, json_encode($allUsers));
 
   // Retorno al usuario que acabo de guardar para poder tenerlo listo y loguearlo
   return $finalUser;
@@ -313,7 +242,7 @@ function nameUserExist($nameUser) {
   // Recorro el array de usuarios
   foreach ($allUsers as $oneUser) {
     // Si la posición "email" del usuario en la iteración coincide con el email que pasé como parámetro
-    if ($oneUser['name_user'] == $nameUser) {
+    if ($oneUser['name-user'] == $nameUser) {
       return true;
     }
   }
@@ -334,7 +263,7 @@ function loginValidate() {
   // Trimeo los campos que recibo por $_POST
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
-  $nameUser = trim($_POST['name_user']);
+  $nameUser = trim($_POST['name-user']);
 
   // Si está vacío el campo: $email
   if ( empty($email) ) {
@@ -359,12 +288,12 @@ function loginValidate() {
     $errors['password'] = 'El password es obligatorio';
   }
 
-  // Si está vacío el campo: $name_user
+  // Si está vacío el campo: $name-user
   if ( empty($nameUser) ) {
-    $errors['name_user'] = 'El nombre de usuario es obligatorio';
+    $errors['name-user'] = 'El nombre de usuario es obligatorio';
   } elseif ( !nameUserExist($nameUser) ) { // Si no existe el usuario
-    // $errors['name_user'] = 'Ese nombre de usuario no está registrado en nuestra base de datos';
-    $errors['name_user'] = 'Las credenciales no coinciden';
+    // $errors['name-user'] = 'Ese nombre de usuario no está registrado en nuestra base de datos';
+    $errors['name-user'] = 'Las credenciales no coinciden';
   }
 
   // Retorno el array de errores con los mensajes de error

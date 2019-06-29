@@ -1,4 +1,5 @@
 <?php
+
   // Incluimos el controlador del registro-login
   // De esta manera tengo el scope a la funciones que necesito
   require_once 'register-login-controller.php';
@@ -23,14 +24,14 @@
 
   // Variables para persitir
 	$name = '';
-  $nameUser = '';
+	$nameUser = '';
 	$email = '';
 	$countryFromPost = '';
 
   if($_POST && isset($_POST["reg"])) {
     // Las variables de persistencia les asigno el valor que vino de $_POST
 		$name = trim($_POST['name']);
-    $nameUser = trim($_POST['name-user']);
+		$nameUser = trim($_POST['name_user']);
 		$email = trim($_POST['email']);
 		$countryFromPost = $_POST['country'];
 
@@ -57,9 +58,6 @@
 			// Logueo al usuario
 			login($theUser);
 
-    /*  echo "<pre>";
-      var_dump($_POST);
-      echo "</pre>";*/
     }
   }
 
@@ -90,13 +88,13 @@
             <!--Nombre usuario-->
             <div class="form-group col-md-3">
               <input type="text"
-                name="name-user"
-                class="form-control <?= isset($errorsInRegister['name-user']) ? 'is-invalid' : null ?>"
+                name="name_user"
+                class="form-control <?= isset($errorsInRegister['name_user']) ? 'is-invalid' : null ?>"
                 placeholder="Nombre de usuario"
-                value="<?= isset($_POST["name-user"]) ? $_POST["name-user"] : null ?>"
+                value="<?= isset($_POST["name_user"]) ? $_POST["name_user"] : null ?>"
               >
               <div class="invalid-feedback">
-                <?= isset($errorsInRegister['name-user']) ? $errorsInRegister['name-user'] : null; ?>
+                <?= isset($errorsInRegister['name_user']) ? $errorsInRegister['name_user'] : null; ?>
               </div>
             </div>
           </div>

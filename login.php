@@ -13,7 +13,7 @@
 
 		// Persistimos el email con lo vino por $_POST
 		$email = trim($_POST['email']);
-		$nameUser = trim($_POST['name-user']);
+		$nameUser = trim($_POST['name_user']);
 
 		// La función loginValidate() nos retorna el array de errores que almacenamos en esta variable
 		$errorsInLogin = loginValidate();
@@ -60,13 +60,13 @@
 				<div class="form-group">
 					<input
 					 type="text"
-					 name="name-user"
-					 class="<?= isset($errorsInLogin['name-user']) ? 'form-control is-invalid' : null ?>"
+					 name="name_user"
+					 class="<?= isset($errorsInLogin['name_user']) ? 'form-control is-invalid' : null ?>"
 					 value="<?= $nameUser; ?>"
 					 placeholder="Ingrese su usuario"
 					>
 					<div class="invalid-feedback">
-						<?= isset($errorsInLogin['name-user']) ? $errorsInLogin['name-user'] : null; ?>
+						<?= isset($errorsInLogin['name_user']) ? $errorsInLogin['name_user'] : null; ?>
 					</div>
 				</div>
 				<div>
