@@ -125,7 +125,7 @@
                name="email"
                class="form-control <?= isset($errorsInRegister['email']) ? 'is-invalid' : null ?>"
                placeholder="E-mail"
-               value="<?= $email; ?>"
+               value="<?= isset($_POST["email"]) ? $_POST["email"] : null; ?>"
               >
                <div class="invalid-feedback">
                  <?= isset($errorsInRegister['email']) ? $errorsInRegister['email'] : null; ?>

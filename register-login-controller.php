@@ -237,9 +237,12 @@ function saveUser() {
 
 	$lastId = $base->lastInsertId();
 
-	$query2 = $base->prepare("SELECT * FROM users WHERE id = ?");
-	$query2->execute(12);
+	$query2 = $base->prepare("SELECT * FROM users WHERE id = :elID");
+  $query2->bindValue(':elID', $lastId, PDO::PARAM_INT);
+	$query2->execute();
+
 	$finalUser = $query2->fetch(PDO::FETCH_ASSOC);
+
 } catch(PDOException $error) {
 	die('Error de base de datos guardando usuario');
 }
